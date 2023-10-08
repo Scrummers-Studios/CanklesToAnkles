@@ -5,29 +5,31 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //* Constants
-    private const float BASE_PLAYER_HEIGHT = 0.085f;
-    private const float BASE_PLAYER_WIDTH = 0.035f;
-    private const float BASE_PLAYER_DEPTH = 0.015f;
+    private float BASE_PLAYER_HEIGHT;
+    private float BASE_PLAYER_WIDTH;
+    private float BASE_PLAYER_DEPTH;
 
-    //* Fields
-
-    // Suggests that the player starts on the ground
     public bool isGrounded = true;
-    // Suggests that the player starts on its feet
     public bool isCrouched = false;
+    public bool isJumping = false;
 
-    // The players Rigidbody for interacting with physics
-    public Rigidbody playerRigidBody;
-
-    // The players Collider for detecting contanct between game objects.
-    public BoxCollider playerCollider;
+    private Rigidbody playerRigidBody;
+    private BoxCollider playerCollider;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidBody = GetComponent<Rigidbody>();
-        playerCollider = GetComponentInChildren<BoxCollider>();
+        playerCollider = GetComponent<BoxCollider>();
+        animator = GetComponentInChildren<Animator>();
+
+
+
+        // Register size from Collider object
+        BASE_PLAYER_WIDTH = playerCollider.size.x;
+        BASE_PLAYER_HEIGHT = playerCollider.size.y;
+        BASE_PLAYER_DEPTH = playerCollider.size.z;
     }
 
     // Response to the player object colliding with other objects
@@ -35,11 +37,16 @@ public class PlayerController : MonoBehaviour
     {
         collision.gameObject.CompareTag("Ground");
         isGrounded = true;
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     // Using FixedUpdate for physics related logic
     void FixedUpdate()
     {
+        // animator.SetBool("isCrouched", isCrouched);
+        // animator.SetBool("isGrounded", isGrounded);
+
+
         OnPlayerJumpEvent();
         OnPlayerCrouchEvent();
     }
@@ -50,15 +57,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
             isCrouched = true;
+            animator.SetBool("isCrouched", isCrouched);
+
         }
         else
         {
             isCrouched = false;
+            animator.SetBool("isCrouched", isCrouched);
         }
 
         if (isCrouched)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
+            // playerCollider.center = new UnityEngine.Vector3(playerCollider.center.x, playerCollider.size.y * 0.5f, playerCollider.size.z);
         }
         else
         {
@@ -73,6 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRigidBody.velocity = new UnityEngine.Vector3(0f, 5f);
             isGrounded = false;
+            animator.SetBool("isGrounded", isGrounded);
         }
     }
 }

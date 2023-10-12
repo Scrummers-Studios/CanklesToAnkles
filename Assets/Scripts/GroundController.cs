@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GroundController : MonoBehaviour
 {
+
+    int speed = -5;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class GroundController : MonoBehaviour
     void Update()
     {
         
-        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
+        transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
 
     }
 }

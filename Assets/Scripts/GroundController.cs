@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundController : MonoBehaviour
 {
 
-    int speed = -5;
+    [SerializeField] int speed = -5;
     // Start is called before the first frame update
     void Start()
     {

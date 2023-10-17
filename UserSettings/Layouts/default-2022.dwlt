@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 118
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 349
     height: 939
-  m_MinSize: {x: 276, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -771,9 +771,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1130217, y: 6.5033145, z: -3.4876537}
+    m_Target: {x: -1.3318555, y: -2.8830397, z: 10.819138}
     speed: 2
-    m_Value: {x: 1.1130217, y: 6.5033145, z: -3.4876537}
+    m_Value: {x: -1.3318555, y: -2.8830397, z: 10.819138}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -819,9 +819,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.20638356, y: -0.08233146, z: 0.017463075, w: 0.974842}
+    m_Target: {x: 0.18192212, y: -0.044485163, z: 0.008270454, w: 0.98227}
     speed: 2
-    m_Value: {x: 0.20627563, y: -0.08817924, z: 0.018701106, w: 0.97433317}
+    m_Value: {x: 0.18192236, y: -0.044485223, z: 0.008270465, w: 0.9822713}
   m_Size:
     m_Target: 7.071068
     speed: 2
@@ -888,14 +888,14 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 3017018964320456297, guid: 2a1efe45a0049144a93932f337ed14be, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.78729737
+    - e00: 0.6692028
       e01: 0
       e02: 0
-      e03: -14.981018
+      e03: 175.9661
       e10: 0
-      e11: 0.78729737
+      e11: 0.6692028
       e12: 0
-      e13: 191.12274
+      e13: 225.75433
       e20: 0
       e21: 0
       e22: 1
@@ -959,7 +959,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b8f1ffff3cf3ffffe6f3ffff7ef5ffff
+      m_ExpandedIDs: eeebffff8eedffff5ceeffffacf8fffffafaffffb8b00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1028,7 +1028,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Textures and Characters/SyntyStudios/PolygonCity/Prefabs/Characters
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8e670000
     m_LastClickedID: 26510
-    m_ExpandedIDs: 000000008ead000090ad000092ad000094ad000096ad0000
+    m_ExpandedIDs: 000000006aa800006ca800006ea8000070a8000072a80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1072,7 +1072,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000008ead000090ad000092ad000094ad000096ad0000
+    m_ExpandedIDs: ffffffff000000006aa800006ca800006ea80000bea80000caa8000012a9000030a900003ca900003ea9000058a900001eb100003cb1000038b40000d2b60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

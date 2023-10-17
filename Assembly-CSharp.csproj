@@ -97,12 +97,10 @@
     <None Include="Assets\Textures and Characters\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
     <None Include="Assets\UI\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Textures and Characters\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Object.shader" />
     <None Include="Assets\UI\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Global.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Textures and Characters\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Global.shader" />
@@ -113,10 +111,8 @@
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\UI\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Object.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Textures and Characters\SyntyStudios\PolygonStarter\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
     <None Include="Assets\UI\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

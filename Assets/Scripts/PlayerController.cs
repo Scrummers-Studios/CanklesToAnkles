@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
     {
         if(transform.position.x < OUT_OF_BOUNDS)
         {
+            playerHealth.takeDamage(20);
             transform.position = respawnPoint;
         }
     }

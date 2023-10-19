@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     public float currentHealth = 10;
     [Tooltip("If this object is allways invinsible or not")]
     public bool isAllwaysInvinsible = false;
+    [Tooltip("The gameObject that has health")]
+    public GameObject healthEntity;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +26,32 @@ public class Health : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void takeDamage(int damageAmount)
+    {
+        if(isAllwaysInvinsible || currentHealth <= 0)
+        {
+            return;
+        } else
+        {
+            //TODO: Add damage effect initiation here
+
+            currentHealth = Mathf.Clamp(currentHealth - damageAmount, 0, maximumHealth);
+            CheckDeath();
+        }
+    }
+
+    private void CheckDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        this.healthEntity.SetActive(false);
     }
 }

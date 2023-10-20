@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Test change
 public class GroundController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,7 +14,7 @@ public class GroundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
 
     }

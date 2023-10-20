@@ -4,12 +4,11 @@
 #
 
 # Div
-/Library
-/Logs
-/UserSettings
+Library
+Logs
+UserSettings
 /.vscode
 /.vs
-
 
 /[Ll]ibrary/
 /[Tt]emp/

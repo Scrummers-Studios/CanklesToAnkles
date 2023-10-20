@@ -5,6 +5,10 @@ using UnityEngine;
 // Test change
 public class GroundController : MonoBehaviour
 {
+    public int movingSpeedLeftRight = 0;
+    public int movingSpeedDownUp = 0;
+    public int movingSpeedBackForward = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +17,7 @@ public class GroundController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime);
-
+    {   
+        transform.Translate(new Vector3(movingSpeedLeftRight, 0, movingSpeedBackForward) * Time.deltaTime);
     }
 }

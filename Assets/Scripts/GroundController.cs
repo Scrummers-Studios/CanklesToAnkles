@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Test change
 public class GroundController : MonoBehaviour
 {
     public int movingSpeedLeftRight = 0;
@@ -16,9 +17,7 @@ public class GroundController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {   
         transform.Translate(new Vector3(movingSpeedLeftRight, 0, movingSpeedBackForward) * Time.deltaTime);
-
     }
 }

@@ -1990,8 +1990,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2644,8 +2644,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2997,8 +2997,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Volume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: -8559548273825657331, guid: 988b90900f82f3e48bdb06fe807279a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3626,8 +3626,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3758,10 +3758,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cankles to Ankels
+  m_text: Cankles To Ankles
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efb5cc0d5dfeefe4c89a7e984f928733, type: 2}
-  m_sharedMaterial: {fileID: -8559548273825657331, guid: efb5cc0d5dfeefe4c89a7e984f928733, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3791,7 +3791,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 18
+  m_fontStyle: 19
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4497,8 +4497,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: -8559548273825657331, guid: 988b90900f82f3e48bdb06fe807279a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4631,8 +4631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4765,8 +4765,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Diabeetus escape 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: efb5cc0d5dfeefe4c89a7e984f928733, type: 2}
-  m_sharedMaterial: {fileID: -8559548273825657331, guid: efb5cc0d5dfeefe4c89a7e984f928733, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
+  m_sharedMaterial: {fileID: 2992119618259496055, guid: d307d70d0877b824da037e60a3e2a9d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4796,7 +4796,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 19
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

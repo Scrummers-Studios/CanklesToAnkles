@@ -127,6 +127,18 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+=======
+    "com.unity.inputsystem": {
+      "version": "1.6.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> af9b9cb438e1057cae29556b633e0b605e466d98
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 3,
@@ -150,6 +162,18 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+=======
+    "com.unity.postprocessing": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> af9b9cb438e1057cae29556b633e0b605e466d98
     "com.unity.probuilder": {
       "version": "5.1.1",
       "depth": 1,

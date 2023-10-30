@@ -2,6 +2,15 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+
+# Div
+Library
+Logs
+UserSettings
+obj
+/.vscode
+/.vs
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/

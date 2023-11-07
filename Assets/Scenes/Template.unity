@@ -5347,6 +5347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1083620818}
+  scenes: []
+  allowPauseGame: 1
 --- !u!4 &1341274776
 Transform:
   m_ObjectHideFlags: 0

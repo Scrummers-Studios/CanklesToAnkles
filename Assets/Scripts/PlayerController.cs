@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
+
+        // WIP
+        playerCollider.material.dynamicFriction = 0;
+        playerCollider.material.staticFriction = 0;
     }
 
     // Response to the player object colliding with other objects

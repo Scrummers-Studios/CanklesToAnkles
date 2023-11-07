@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = true;
     public bool isCrouched = false;
     public bool isJumping = false;
+    public bool donePlayerCrouchOffset = false;
+    public bool donePlayerStandOffset = true;
 
     private Rigidbody playerRigidBody;
     private BoxCollider playerCollider;
@@ -23,8 +25,6 @@ public class PlayerController : MonoBehaviour
         playerRigidBody = GetComponent<Rigidbody>();
         playerCollider = GetComponent<BoxCollider>();
         animator = GetComponentInChildren<Animator>();
-
-
 
         // Register size from Collider object
         BASE_PLAYER_WIDTH = playerCollider.size.x;
@@ -43,10 +43,6 @@ public class PlayerController : MonoBehaviour
     // Using FixedUpdate for physics related logic
     void FixedUpdate()
     {
-        // animator.SetBool("isCrouched", isCrouched);
-        // animator.SetBool("isGrounded", isGrounded);
-
-
         OnPlayerJumpEvent();
         OnPlayerCrouchEvent();
     }
@@ -66,14 +62,36 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isCrouched", isCrouched);
         }
 
+        togglePlayerCrouchedSize(isCrouched);
+
+    }
+
+    private void togglePlayerCrouchedSize(bool isCrouched)
+    {
         if (isCrouched)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
-            // playerCollider.center = new UnityEngine.Vector3(playerCollider.center.x, playerCollider.size.y * 0.5f, playerCollider.size.z);
+
+            if (!donePlayerCrouchOffset)
+            {
+                playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y - 0.5f, playerRigidBody.position.z);
+                donePlayerCrouchOffset = true;
+            }
+
+            donePlayerStandOffset = false;
         }
         else
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT, BASE_PLAYER_DEPTH);
+
+            if (!donePlayerStandOffset)
+            {
+                playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y + 0.5f, playerRigidBody.position.z);
+                donePlayerStandOffset = true;
+
+            }
+
+            donePlayerCrouchOffset = false;
         }
     }
 

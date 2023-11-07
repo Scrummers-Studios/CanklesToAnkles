@@ -10,6 +10,7 @@ using UnityEngine;
 /// </summary>
 public class LevelSwitcher : MonoBehaviour
 {
+
     /// <summary>
     /// Description:
     /// Passes a string to the Level Manager, which loads a scene using that name

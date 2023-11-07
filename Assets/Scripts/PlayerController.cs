@@ -5,21 +5,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Properties used for player size
     private float BASE_PLAYER_HEIGHT;
     private float BASE_PLAYER_WIDTH;
     private float BASE_PLAYER_DEPTH;
 
+    // Movement properties
+    public float jumpingPower = 35;
     public bool isGrounded = true;
     public bool isCrouched = false;
     public bool isJumping = false;
-    public bool donePlayerCrouchOffset = false;
-    public bool donePlayerStandOffset = true;
+
+    // Conditions for player crouching
+    private bool donePlayerCrouchOffset = false;
+    private bool donePlayerStandOffset = true;
 
     private Rigidbody playerRigidBody;
     private BoxCollider playerCollider;
     private Animator animator;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Initializes the player controller and its relevant components.
+    /// 
+    /// </summary>
     void Start()
     {
         playerRigidBody = GetComponent<Rigidbody>();
@@ -30,13 +38,13 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
-
-        // WIP
-        playerCollider.material.dynamicFriction = 0;
-        playerCollider.material.staticFriction = 0;
     }
 
-    // Response to the player object colliding with other objects
+    /// <summary>
+    /// Handles the players collision
+    /// 
+    /// </summary>
+    /// <param name="collision"></param>
     void OnCollisionEnter(Collision collision)
     {
         collision.gameObject.CompareTag("Ground");
@@ -51,7 +59,10 @@ public class PlayerController : MonoBehaviour
         OnPlayerCrouchEvent();
     }
 
-    // Response to the player crouching
+    /// <summary>
+    /// Handles the player crouching
+    /// 
+    /// </summary>
     private void OnPlayerCrouchEvent()
     {
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
@@ -70,6 +81,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Translates the player collider size to simulate crouching resulting in a more smooth transition
+    /// 
+    /// </summary>
+    /// <param name="isCrouched"></param>
     private void togglePlayerCrouchedSize(bool isCrouched)
     {
         if (isCrouched)
@@ -99,12 +115,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Response to the player jumping
+    /// <summary>
+    /// Handles the player jumping 
+    /// </summary>
     private void OnPlayerJumpEvent()
     {
+
         if (Input.GetKey(KeyCode.Space) && isGrounded == true)
         {
-            playerRigidBody.velocity = new UnityEngine.Vector3(0f, 5f);
+            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
             isGrounded = false;
             animator.SetBool("isGrounded", isGrounded);
         }

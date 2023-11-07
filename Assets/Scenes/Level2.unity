@@ -12774,11 +12774,11 @@ Transform:
   m_GameObject: {fileID: 1410773912}
   serializedVersion: 2
   m_LocalRotation: {x: 0.061742194, y: -0.70311475, z: 0.061514646, w: 0.70571494}
-  m_LocalPosition: {x: 4.1460013, y: 2.31, z: 0.10000229}
+  m_LocalPosition: {x: 5.2450013, y: 2.31, z: -7.6899977}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2126860124}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10, y: 0.211, z: 0}
 --- !u!81 &1410773914
 AudioListener:
@@ -16273,7 +16273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingSpeedLeftRight: 0
   movingSpeedDownUp: 0
-  movingSpeedBackForward: -3
+  movingSpeedBackForward: -4
 --- !u!1001 &1697986176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20643,6 +20643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126860124}
   - component: {fileID: 2126860127}
+  - component: {fileID: 2126860128}
   - component: {fileID: 2126860126}
   - component: {fileID: 2126860125}
   m_Layer: 0
@@ -20665,7 +20666,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1410773913}
   - {fileID: 752377692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20677,7 +20677,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126860123}
   serializedVersion: 4
-  m_Mass: 90.01
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -20691,11 +20691,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 114
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &2126860126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20729,11 +20729,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05d1be4d5b9b654ca94d7550f21f415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpingPower: 75
   isGrounded: 1
   isCrouched: 0
   isJumping: 1
-  donePlayerCrouchOffset: 0
-  donePlayerStandOffset: 0
+--- !u!114 &2126860128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126860123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f676540a08bb32647a6355c83900e1eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 2126860125}
+  defaultGravityScale: 1
+  fallingGravityScale: 2
 --- !u!1001 &2130130538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21228,6 +21242,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1637423108}
   - {fileID: 1328193443}
+  - {fileID: 1410773913}
   - {fileID: 2126860124}
   - {fileID: 1770928141}
   - {fileID: 698883078}

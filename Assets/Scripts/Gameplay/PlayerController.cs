@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider playerCollider;
     private Animator animator;
 
+
     /// <summary>
     /// Initializes the player controller and its relevant components.
     /// 

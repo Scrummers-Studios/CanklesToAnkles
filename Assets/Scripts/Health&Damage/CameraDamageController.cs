@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RespawnController : MonoBehaviour
+public class CameraDamgeController : MonoBehaviour
 {
     public Camera cam;
     public GameObject player;
-    private Vector3 basePosition;
     private Plane[] cameraFrustum;
     private BoxCollider playerCollider;
 
     private void Start()
     {
-        basePosition = player.transform.position;
         playerCollider = player.GetComponent<BoxCollider>();
     }
 
@@ -21,14 +19,11 @@ public class RespawnController : MonoBehaviour
 
         if (!ViewCheck())
         {
-            Respawn();
+            player.GetComponent<HealthScript>().LooseHealth(50f);
+            player.GetComponent<HealthScript>().Respawn();
         }
     }
 
-    private void Respawn()
-    {
-        player.transform.position = basePosition;
-    }
 
 
     private bool ViewCheck()

@@ -16,6 +16,7 @@ public class GroundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(horizontalSpeed, 0, 0) * Time.deltaTime);
+        // Assumes a direction of left-to-right and takes the negative value of the horizontal speed to move the ground to the left
+        transform.Translate(new Vector3(-horizontalSpeed, 0, 0) * Time.deltaTime);
     }
 }

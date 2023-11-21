@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_DEPTH = playerCollider.size.z;
     }
 
+    //TODO ON collision stay med vinkel
     /// <summary>
     /// Handles the players collision
     /// 

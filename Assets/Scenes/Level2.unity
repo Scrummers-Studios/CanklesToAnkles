@@ -12081,7 +12081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90da032fe5f21d42b2e799fd43ed448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 3
+  horizontalSpeed: 6
 --- !u!1001 &1333005946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21598,21 +21598,9 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 580994289}
-    - target: {fileID: 4034710414096423798, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
-      propertyPath: jumpingPower
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7395490911677832463, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7395490911677832463, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
-      propertyPath: m_Constraints
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 7395490911677832463, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
+    - target: {fileID: 5747345257516562345, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
+      propertyPath: fallingGravityScale
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7487416410222665082, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
       propertyPath: m_Name

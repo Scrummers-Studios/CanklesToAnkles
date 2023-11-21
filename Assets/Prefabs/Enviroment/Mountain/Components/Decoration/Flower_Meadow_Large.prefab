@@ -1,0 +1,285 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8839210697687350810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7725496065759447848}
+  m_Layer: 0
+  m_Name: Flower_Meadow_Large
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7725496065759447848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839210697687350810}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3642475759599136832}
+  - {fileID: 5895223522032932070}
+  - {fileID: 9158989047769465866}
+  - {fileID: 5963923245643891927}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &231332046969788253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7725496065759447848}
+    m_Modifications:
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159411639847685729, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_Name
+      value: 'Flower_Meadow_Small '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+--- !u!4 &3642475759599136832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+  m_PrefabInstance: {fileID: 231332046969788253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5666147501381706519
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7725496065759447848}
+    m_Modifications:
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999051
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.04355596
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 4.993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159411639847685729, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_Name
+      value: Flower_Meadow_Small  (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+--- !u!4 &9158989047769465866 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+  m_PrefabInstance: {fileID: 5666147501381706519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6947222085993247739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7725496065759447848}
+    m_Modifications:
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.94542795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.32583138
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -38.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159411639847685729, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_Name
+      value: Flower_Meadow_Small  (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+--- !u!4 &5895223522032932070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+  m_PrefabInstance: {fileID: 6947222085993247739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7169004607000044490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7725496065759447848}
+    m_Modifications:
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.532
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7788761
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.62717783
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 77.684
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159411639847685729, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+      propertyPath: m_Name
+      value: Flower_Meadow_Small  (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+--- !u!4 &5963923245643891927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3583025970710112029, guid: e94d9ce4f1d0dc44183a84acbd80b268, type: 3}
+  m_PrefabInstance: {fileID: 7169004607000044490}
+  m_PrefabAsset: {fileID: 0}

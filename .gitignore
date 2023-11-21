@@ -8,8 +8,8 @@ Library
 Logs
 UserSettings
 obj
-/.vscode
-/.vs
+.vscode
+.vs
 
 /[Ll]ibrary/
 /[Tt]emp/

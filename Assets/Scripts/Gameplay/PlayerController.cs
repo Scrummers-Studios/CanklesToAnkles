@@ -127,40 +127,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // /// <summary>
-    // /// Handles the players collision
-    // /// 
-    // /// </summary>
-    // /// <param name="collision"></param>
-    // void OnCollisionEnter(Collision collision)
+    // // Checks if the player has vertical velocity
+    // private bool HasVerticalVelocity()
     // {
-    //     if (collision.gameObject.CompareTag("Ground"))
+    //     if (playerRigidBody.velocity.y == 0)
     //     {
-    //         isGrounded = true;
-    //         isJumping = false;
-    //         animator.SetBool("isJumping", false);
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
     //     }
     // }
 
-    private bool HasVerticalVelocity()
-    {
-        if (playerRigidBody.velocity.y != 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
     // Updates the status of the player being grounded
     private void UpdateGroundedStatus()
     {
-        float rayLength = 0.1f;
+        float rayLength = .1f;
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
-        Debug.Log("isGrounded: " + isGrounded);
     }
 
     /// <summary>

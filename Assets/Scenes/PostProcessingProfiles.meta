@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/LowlyPoly/Stylized Grass Texture.meta
+guid: 9f9c36e7b2a956e4c9baf659b81f61b1
+=======
 guid: c9d50baf6e3c3af469c2e3f94a497e87
+>>>>>>> main:Assets/Scenes/PostProcessingProfiles.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

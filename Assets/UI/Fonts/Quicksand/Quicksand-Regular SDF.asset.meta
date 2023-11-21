@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/ProBuilder Data/Default Material Palette.asset.meta
+guid: 69b64b5d901e46a4f87ee4ea25b3cb91
+=======
 guid: 743d58e07a98fbe409742ceb7fc293b0
+>>>>>>> main:Assets/UI/Fonts/Quicksand/Quicksand-Regular SDF.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

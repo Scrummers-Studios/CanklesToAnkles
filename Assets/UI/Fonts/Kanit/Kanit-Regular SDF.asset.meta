@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Polybrush Data/Color Palette/ColorPalette-Default.asset.meta
+guid: 46cd393300f5d324c8d84d83846c46f3
+=======
 guid: d307d70d0877b824da037e60a3e2a9d9
+>>>>>>> main:Assets/UI/Fonts/Kanit/Kanit-Regular SDF.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

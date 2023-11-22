@@ -1534,6 +1534,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8948263914410691566, guid: ba978837a233d9c4da4b1478c405c020, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948263914410691566, guid: ba978837a233d9c4da4b1478c405c020, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991703383062059474, guid: ba978837a233d9c4da4b1478c405c020, type: 3}
       propertyPath: m_Layer
       value: 3

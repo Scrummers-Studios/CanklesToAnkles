@@ -54,7 +54,6 @@ MonoBehaviour:
   isGrounded: 0
   isCrouched: 0
   isJumping: 0
-  lastJumpTime: 0
 --- !u!114 &5747345257516562345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +233,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9557904, guid: 5f6cbb0f4dd572e47ab1ee6c2a3a36d1, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c33da84895a5c9847acf2dc393368406, type: 3}
     - target: {fileID: 9557904, guid: 5f6cbb0f4dd572e47ab1ee6c2a3a36d1, type: 3}
       propertyPath: m_Controller
       value: 

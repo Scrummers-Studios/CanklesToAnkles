@@ -782,6 +782,10 @@ PrefabInstance:
       propertyPath: useLives
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4034710414096423798, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
+      propertyPath: jumpingPower
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6575361420660819168, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
       propertyPath: m_IsActive
       value: 0

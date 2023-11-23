@@ -27,11 +27,15 @@ public class HealthScript : MonoBehaviour
     public float respawnWaitTime = 3f;
 
     public GameObject target;
+    public GameObject ground;
+
+    private Vector3 groundPosition;
     private Vector3 basePosition;
 
     private void Start()
     {
         basePosition = target.transform.position;
+        groundPosition = ground.transform.position;
     }
 
     public void LooseHealth(float damage)
@@ -51,7 +55,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    private void LooseLife(int lives)
+    public void LooseLife(int lives)
     {
         if(!useLives)
         {
@@ -70,6 +74,8 @@ public class HealthScript : MonoBehaviour
     public void Respawn()
     {
         target.transform.position = basePosition;
+        target.GetComponent<Rigidbody>().velocity.Set(0, 0, 0);
+        ground.transform.position = groundPosition;
     }
 
     private void Die()
@@ -80,6 +86,16 @@ public class HealthScript : MonoBehaviour
             //GameManager display gameover and furthur handling
         }
 
+    }
+
+    public int GetLives()
+    {
+        return currentLives;
+    }
+
+    public float GetHitPoints()
+    {
+        return currentHealth;
     }
 
 }

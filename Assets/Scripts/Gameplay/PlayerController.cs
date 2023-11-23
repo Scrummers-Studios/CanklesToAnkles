@@ -50,22 +50,25 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             isJumping = true;
+            animator.SetBool("isJumping", true);
+          
         }
         else
         {
             isJumping = false;
-
+            animator.SetBool("isJumping", false);
         }
 
         // Crouching
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
             isCrouched = true;
+            animator.SetBool("isCrouched", true);
         }
         else
         {
             isCrouched = false;
-
+            animator.SetBool("isCrouched", false);
         }
     }
 

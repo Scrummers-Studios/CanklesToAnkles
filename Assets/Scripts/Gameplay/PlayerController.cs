@@ -49,14 +49,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Jumping
+        // Using GetKey instead of GetKeyDown as it allows for holding down the key
         if (Input.GetKey(KeyCode.Space))
         {
             isJumping = true;
-            Debug.Log("Jumping pressed");
         }
         else
         {
-            Debug.Log("Jumping not pressed");
             isJumping = false;
 
         }
@@ -76,6 +75,7 @@ public class PlayerController : MonoBehaviour
     // Using FixedUpdate for physics related logic
     void FixedUpdate()
     {
+        UpdateGroundedStatus();
         OnPlayerCrouchEvent();
         OnPlayerJumpEvent();
     }
@@ -127,18 +127,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Handles the players collision
-    /// 
-    /// </summary>
-    /// <param name="collision"></param>
-    void OnCollisionEnter(Collision collision)
+    // Checks if the player has vertical velocity
+    private bool HasVerticalVelocity()
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (playerRigidBody.velocity.y == 0)
         {
-            isGrounded = true;
-            isJumping = false;
-            animator.SetBool("isJumping", false);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Updates the status of the player being grounded
+    private void UpdateGroundedStatus()
+    {
+        float rayLength = .1f;
+
+        // Checks if the player is grounded
+        isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
+        if (isGrounded)
+        {
+            Debug.Log("Ground velocity: " + playerRigidBody.velocity.y);
         }
     }
 
@@ -147,16 +158,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerJumpEvent()
     {
-        // float rayLength = 0.1f;
-        // bool grounded = Physics.Raycast(playerCollider.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
 
-        if (isGrounded == true && isJumping && Time.time - lastJumpTime >= 0.05f)
+        // Temporary solution for bouncing
+        if (isGrounded && isJumping && Time.time - lastJumpTime >= 1f)
         {
-            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
-            lastJumpTime = Time.time;
+            playerRigidBody.velocity.Set(0, 0, 0);
 
-            isGrounded = false;
-            isJumping = true;
+            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower + 6 * playerRigidBody.velocity.y), ForceMode.Impulse);
+            lastJumpTime = Time.time;
 
             animator.SetBool("isJumping", true);
         }

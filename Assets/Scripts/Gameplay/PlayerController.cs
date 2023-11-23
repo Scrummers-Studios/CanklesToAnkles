@@ -143,14 +143,10 @@ public class PlayerController : MonoBehaviour
     // Updates the status of the player being grounded
     private void UpdateGroundedStatus()
     {
-        float rayLength = .1f;
+        float rayLength = .01f;
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
-        if (isGrounded)
-        {
-            Debug.Log("Ground velocity: " + playerRigidBody.velocity.y);
-        }
     }
 
     /// <summary>
@@ -160,12 +156,13 @@ public class PlayerController : MonoBehaviour
     {
 
         // Temporary solution for bouncing
-        if (isGrounded && isJumping && Time.time - lastJumpTime >= 1f)
+        // Physics: Jump equation, sqrt(2*g*h)
+        if (isGrounded && isJumping)
         {
             playerRigidBody.velocity.Set(0, 0, 0);
 
-            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower + 6 * playerRigidBody.velocity.y), ForceMode.Impulse);
-            lastJumpTime = Time.time;
+            Debug.Log("Ground velocity upon jump: " + playerRigidBody.velocity.y);
+            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
 
             animator.SetBool("isJumping", true);
         }

@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Crouching
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && isJumping == false)
         {
             isCrouched = true;
             animator.SetBool("isCrouched", true);

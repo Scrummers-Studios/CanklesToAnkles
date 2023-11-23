@@ -127,18 +127,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // // Checks if the player has vertical velocity
-    // private bool HasVerticalVelocity()
-    // {
-    //     if (playerRigidBody.velocity.y == 0)
-    //     {
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
-    // }
+    // Checks if the player has vertical velocity
+    private bool HasVerticalVelocity()
+    {
+        if (playerRigidBody.velocity.y == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     // Updates the status of the player being grounded
     private void UpdateGroundedStatus()
@@ -147,6 +147,10 @@ public class PlayerController : MonoBehaviour
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
+        if (isGrounded)
+        {
+            Debug.Log("Ground velocity: " + playerRigidBody.velocity.y);
+        }
     }
 
     /// <summary>
@@ -155,9 +159,12 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerJumpEvent()
     {
 
-        if (isGrounded && isJumping && Time.time - lastJumpTime >= 0.1f)
+        // Temporary solution for bouncing
+        if (isGrounded && isJumping && Time.time - lastJumpTime >= 1f)
         {
-            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
+            playerRigidBody.velocity.Set(0, 0, 0);
+
+            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower + 6 * playerRigidBody.velocity.y), ForceMode.Impulse);
             lastJumpTime = Time.time;
 
             animator.SetBool("isJumping", true);

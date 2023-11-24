@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// This script is used to apply custom gravity to a rigidbody
+/// This class is used to tweak a given rigidbody's gravity 
 /// 
 /// Implementation and architecture inspired by https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity 
 /// <remarks>
 /// Date: 07/11/2023
 /// </remarks>
 /// </summary>
-public class PlayerGravity : MonoBehaviour
+public class CustomGravity : MonoBehaviour
 {
     private const float GRAVITY = 9.81f;
 
     // The rigidbody to be affected by the custom gravity
     public Rigidbody rigidbody;
-
     public float defaultGravityScale = 1;
-
     public float fallingGravityScale = 2;
 
 
@@ -48,6 +46,9 @@ public class PlayerGravity : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method for determining wheter the rigidbody is falling
+    /// </summary>
     private bool IsFalling()
     {
         if (rigidbody.velocity.y >= 0)
@@ -61,7 +62,7 @@ public class PlayerGravity : MonoBehaviour
     }
 
     /// <summary>
-    ///  Continiously applies the given gravity to the rigidbody replacing the previous gravity
+    ///  Applies the given gravity to the rigidbody replacing the previous gravity
     /// </summary>
     /// <param name="gravity"></param>
     public void SetGravity(Vector3 gravity)

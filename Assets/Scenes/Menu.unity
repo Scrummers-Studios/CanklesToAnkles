@@ -6976,7 +6976,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 627c7327a0f6c334a887cf1ab7cec6cc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7096,6 +7096,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1039788302}
     m_Modifications:
+    - target: {fileID: 316318116264677326, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_text
+      value: 'Roll
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 1237876388308932488, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -67.99733
@@ -7235,12 +7241,20 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
+      propertyPath: m_margin.w
+      value: -7.07296
+      objectReference: {fileID: 0}
+    - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_margin.x
-      value: -9.047897
+      value: -40.067627
+      objectReference: {fileID: 0}
+    - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
+      propertyPath: m_margin.y
+      value: -7.5193567
       objectReference: {fileID: 0}
     - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_margin.z
-      value: 10.551659
+      value: -20.673042
       objectReference: {fileID: 0}
     - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_fontAsset
@@ -7258,6 +7272,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2987064716304861451, guid: 18b634f2196aebe409f7bf47b21ff5e3, type: 2}
+    - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 265957577130770532, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
@@ -7622,6 +7640,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2987064716304861451, guid: 18b634f2196aebe409f7bf47b21ff5e3, type: 2}
+    - target: {fileID: 6373554057492799150, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 6373554057492799150, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2

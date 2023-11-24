@@ -41,7 +41,7 @@ public class HealthScript : MonoBehaviour
     public void LooseHealth(float damage)
     {
         currentHealth -= damage;
-        if(currentHealth <= 0f)
+        if (currentHealth <= 0f)
         {
             this.LooseLife(1);
         }
@@ -57,15 +57,16 @@ public class HealthScript : MonoBehaviour
 
     public void LooseLife(int lives)
     {
-        if(!useLives)
+        if (!useLives)
         {
             return;
         }
         currentLives -= lives;
-        if(currentLives <= 0)
+        if (currentLives <= 0)
         {
             Die();
-        } else
+        }
+        else
         {
             Respawn();
             currentHealth = defaultHealth;

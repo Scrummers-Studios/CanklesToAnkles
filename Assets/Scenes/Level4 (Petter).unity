@@ -646,6 +646,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 401752, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
   m_PrefabInstance: {fileID: 1569566511}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &331693068 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a6c736c451a3b6f4b953ab65b3410982, type: 3}
+  m_PrefabInstance: {fileID: 1755734503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &358089118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2703,6 +2708,16 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 456046, guid: ee8cd8009dece0641bb094226947b92c, type: 3}
   m_PrefabInstance: {fileID: 1340264551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1865956783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7844e503ca0684143aa81c90c320b1f9, type: 3}
+  m_PrefabInstance: {fileID: 221949792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1927959043 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c33da84895a5c9847acf2dc393368406, type: 3}
+  m_PrefabInstance: {fileID: 1020587559}
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &1944464955 stripped
 Camera:

@@ -52,11 +52,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             isJumping = true;
+            animator.SetBool("isJumping", true);
+
         }
         else
         {
             isJumping = false;
-
+            animator.SetBool("isJumping", false);
         }
 
         // Rolling

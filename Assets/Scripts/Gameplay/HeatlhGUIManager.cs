@@ -7,7 +7,6 @@ public class HeatlhGUIManager : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public GameObject player;
-    public TextMeshProUGUI livesText;
     // Start is called before the first frame update
  
 
@@ -15,9 +14,6 @@ public class HeatlhGUIManager : MonoBehaviour
     void Update()
     {
         string hitpoints = player.GetComponent<HealthScript>().GetHitPoints().ToString();
-        string lives = player.GetComponent<HealthScript>().GetLives().ToString();
-
-        livesText.SetText(lives);
         healthText.SetText(hitpoints);
     }
 }

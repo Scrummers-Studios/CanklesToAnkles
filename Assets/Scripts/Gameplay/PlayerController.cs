@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -12,10 +11,11 @@ public class PlayerController : MonoBehaviour
     private float BASE_PLAYER_DEPTH;
 
     // Movement properties
-    public float jumpingPower = 100f;
+    public float jumpingPower = 35;
     public bool isGrounded = true;
     public bool isCrouched = false;
     public bool isJumping = false;
+    private float lastJumpTime;
 
     // Conditions for player crouching, Assumes player starts in a standing posistion
     private bool correctedPlayerCrouchOffset = false;
@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
+
+
+        lastJumpTime = Time.time;
     }
 
     // Used for input related logic
@@ -50,25 +53,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             isJumping = true;
-            animator.SetBool("isJumping", true);
-          
         }
         else
         {
             isJumping = false;
-            animator.SetBool("isJumping", false);
+
         }
 
         // Crouching
-        if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && isJumping == false)
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
             isCrouched = true;
-            animator.SetBool("isCrouched", true);
         }
         else
         {
             isCrouched = false;
-            animator.SetBool("isCrouched", false);
+
         }
     }
 
@@ -127,10 +127,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Checks if the player has vertical velocity
+    private bool HasVerticalVelocity()
+    {
+        if (playerRigidBody.velocity.y == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     // Updates the status of the player being grounded
     private void UpdateGroundedStatus()
     {
-        float rayLength = .1f;
+        float rayLength = .01f;
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
@@ -141,16 +154,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerJumpEvent()
     {
+
+        // Temporary solution for bouncing
+        // Physics: Jump equation, sqrt(2*g*h)
         if (isGrounded && isJumping)
         {
-            float velocityReset = -(playerRigidBody.velocity.y * playerRigidBody.mass);
+            playerRigidBody.velocity.Set(0, 0, 0);
 
-            Debug.Log("Required force to reset velocity" + velocityReset);
-
-            // Resets the player momentum 
-            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, velocityReset), ForceMode.Impulse);
-
-            // Applies the jumping force
+            Debug.Log("Ground velocity upon jump: " + playerRigidBody.velocity.y);
             playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
 
             animator.SetBool("isJumping", true);

@@ -1397,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 7844e503ca0684143aa81c90c320b1f9, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ec7a3e769c0540044b0c968912752dc1, type: 2}
+      objectReference: {fileID: 9100000, guid: 4f2a6b93720439344bced563e8a20716, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7820,7 +7820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8974842611896019184, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level4 (Petter)
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 8974842611896019184, guid: 487255fadbbfe03478d5f2ed9a38d730, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

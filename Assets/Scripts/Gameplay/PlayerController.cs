@@ -1,9 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
+/// <summary>
+/// A class used to manage the Player and its properties
+/// 
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     // Properties used for player size
@@ -14,13 +14,12 @@ public class PlayerController : MonoBehaviour
     // Movement properties
     public float jumpingPower = 100f;
     public bool isGrounded = true;
-    public bool isCrouched = false;
+    public bool isRolling = false;
     public bool isJumping = false;
+    private bool correctedPlayerColliderIncrease = false;
+    private bool correctedPlayerColliderDecrease = true;
 
-    // Conditions for player crouching, Assumes player starts in a standing posistion
-    private bool correctedPlayerCrouchOffset = false;
-    private bool correctedPlayerStandOffset = true;
-
+    // Player components
     private Rigidbody playerRigidBody;
     private BoxCollider playerCollider;
     private Animator animator;
@@ -42,11 +41,14 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_DEPTH = playerCollider.size.z;
     }
 
-    // Used for input related logic
+    /// <summary>
+    /// Called each frame.
+    /// Input related logic.
+    /// 
+    /// </summary>
     void Update()
     {
         // Jumping
-        // Using GetKey instead of GetKeyDown as it allows for holding down the key
         if (Input.GetKey(KeyCode.Space))
         {
             isJumping = true;
@@ -57,74 +59,70 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        // Crouching
+        // Rolling
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
-            isCrouched = true;
+            isRolling = true;
         }
         else
         {
-            isCrouched = false;
+            isRolling = false;
 
         }
     }
 
-    // Using FixedUpdate for physics related logic
+    /// <summary>
+    /// Logic concerning physics calculations  
+    /// 
+    /// </summary>
     void FixedUpdate()
     {
         UpdateGroundedStatus();
-        OnPlayerCrouchEvent();
+        OnPlayerRollEvent();
         OnPlayerJumpEvent();
     }
 
     /// <summary>
-    /// Handles the player crouching
-    /// 
+    ///  Handles the player rolling
+    ///  
+    /// Adapts the player collider size depending on whether the player is rolling or not while 
+    /// ensureing that the collider remains in same vertical posistion.
     /// </summary>
-    private void OnPlayerCrouchEvent()
+    private void OnPlayerRollEvent()
     {
-        togglePlayerCrouchedSize(isCrouched);
-    }
-
-    /// <summary>
-    /// Adapts the player collider size depending on whether the player is crouched or not.
-    /// 
-    /// </summary>
-    /// <param name="isCrouched"></param>
-    private void togglePlayerCrouchedSize(bool isCrouched)
-    {
-        if (isCrouched)
+        if (isRolling)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
 
-            if (!correctedPlayerCrouchOffset)
+            if (!correctedPlayerColliderIncrease)
             {
                 playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y - 0.5f, playerRigidBody.position.z);
-                correctedPlayerCrouchOffset = true;
-                // TODO: create update animations
+                correctedPlayerColliderIncrease = true;
                 animator.SetBool("isCrouched", true);
             }
 
-            correctedPlayerStandOffset = false;
+            correctedPlayerColliderDecrease = false;
         }
         else
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT, BASE_PLAYER_DEPTH);
 
-            if (!correctedPlayerStandOffset)
+            if (!correctedPlayerColliderDecrease)
             {
                 playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y + 0.5f, playerRigidBody.position.z);
-                correctedPlayerStandOffset = true;
-                // TODO: create update animations
+                correctedPlayerColliderDecrease = true;
                 animator.SetBool("isCrouched", false);
 
             }
 
-            correctedPlayerCrouchOffset = false;
+            correctedPlayerColliderIncrease = false;
         }
     }
 
-    // Updates the status of the player being grounded
+    /// <summary>
+    /// Updates the current status regarding wheter the player is grounded or not.
+    /// 
+    /// </summary>
     private void UpdateGroundedStatus()
     {
         float rayLength = .1f;
@@ -134,20 +132,21 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Handles the player jumping 
+    /// Handles the player jumping and its related physics calulations.
+    /// 
     /// </summary>
     private void OnPlayerJumpEvent()
     {
         if (isGrounded && isJumping)
         {
-            float velocityReset = -(playerRigidBody.velocity.y * playerRigidBody.mass);
+            float momentum = playerRigidBody.velocity.y * playerRigidBody.mass;
 
-            Debug.Log("Required force to reset velocity" + velocityReset);
+            Debug.Log("Required force to reset velocity" + momentum);
 
             // Resets the player momentum 
-            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, velocityReset), ForceMode.Impulse);
+            playerRigidBody.AddForce(new UnityEngine.Vector3(0f, -momentum), ForceMode.Impulse);
 
-            // Applies the jumping force
+            // Changes the players velocity based on the pre-defined jumping force
             playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
 
             animator.SetBool("isJumping", true);

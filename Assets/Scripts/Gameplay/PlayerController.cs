@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool isJumping = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
+    public float lastJumpTime;
 
     // Player components
     private Rigidbody playerRigidBody;

@@ -4793,6 +4793,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413494, guid: c2849fd453abd0445a702a035f04ac60, type: 3}
   m_PrefabInstance: {fileID: 949355546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &491464628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3847962683155338976, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+  m_PrefabInstance: {fileID: 1535101347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &492272709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 497450, guid: c87a99b4c24b9ce48bac40727eb1ecb6, type: 3}
@@ -10916,6 +10921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 2
+  verticalSpeed: 0
 --- !u!4 &1166433501
 Transform:
   m_ObjectHideFlags: 0
@@ -11256,8 +11262,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpingPower: 200
   isGrounded: 1
-  isCrouched: 0
+  isRolling: 0
   isJumping: 0
+  lastJumpTime: 0
 --- !u!114 &1207929245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12850,7 +12857,7 @@ PrefabInstance:
     - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 491464628}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14884,6 +14891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 0
+  verticalSpeed: 0
 --- !u!4 &1500087335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 468652, guid: 1fedb5571d445274782330b0eea48e80, type: 3}
@@ -17362,7 +17370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90da032fe5f21d42b2e799fd43ed448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 2
+  horizontalSpeed: 0
+  verticalSpeed: -2
 --- !u!1001 &1697986176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21903,8 +21912,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpingPower: 75
   isGrounded: 1
-  isCrouched: 0
+  isRolling: 0
   isJumping: 0
+  lastJumpTime: 0
 --- !u!114 &2126860128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,6 @@ public class CameraDamgeController : MonoBehaviour
 
         if (!ViewCheck())
         {
-            player.GetComponent<HealthScript>().LooseLife(1);
             player.GetComponent<HealthScript>().Respawn();
         }
     }

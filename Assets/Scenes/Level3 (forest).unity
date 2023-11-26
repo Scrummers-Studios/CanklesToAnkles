@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16596699, g: 0.18277624, b: 0.33159596, a: 1}
+  m_IndirectSpecularColor: {r: 0.31291854, g: 0.29354936, b: 0.5139981, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,6 +921,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
+--- !u!114 &75497391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9043998508268574096, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+  m_PrefabInstance: {fileID: 4641284932857939919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87604543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7487416410222665082, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
@@ -3120,6 +3131,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1944464955}
+    - target: {fileID: 1340304686979926267, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 75497391}
     - target: {fileID: 1340304686979926267, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
       propertyPath: ground
       value: 

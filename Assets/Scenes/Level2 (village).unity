@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3636986, g: 0.56780785, b: 0.84644985, a: 1}
+  m_IndirectSpecularColor: {r: 0.36355117, g: 0.56773967, b: 0.8464614, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5123,11 +5123,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 413494, guid: c2849fd453abd0445a702a035f04ac60, type: 3}
   m_PrefabInstance: {fileID: 949355546}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &491464628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3847962683155338976, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
-  m_PrefabInstance: {fileID: 1535101347}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &492272709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 497450, guid: c87a99b4c24b9ce48bac40727eb1ecb6, type: 3}
@@ -6212,6 +6207,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078efdee227ce7b40b3a095532cd4e65, type: 3}
+--- !u!1 &591819969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3998380053822802134, guid: 34fbb3411c70f8e4fa2a3bdfd5f1faa6, type: 3}
+  m_PrefabInstance: {fileID: 15534237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &592416209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8692,6 +8692,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
+--- !u!114 &829645853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9043998508268574096, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+  m_PrefabInstance: {fileID: 1535101347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829885463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1765995492758009968, guid: cff631b005b811944a846f281776d825, type: 3}
@@ -11735,14 +11746,10 @@ MonoBehaviour:
   defaultHealth: 100
   maximumHealth: 200
   currentHealth: 100
-  invincibilityTime: 3
   damageTaking: 20
-  useLives: 1
-  currentLives: 100
-  maximumLives: 100
-  respawnWaitTime: 3
   target: {fileID: 1207929240}
   ground: {fileID: 1697934817}
+  image: {fileID: 829645853}
 --- !u!114 &1207929246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13307,7 +13314,7 @@ PrefabInstance:
     - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 491464628}
+      objectReference: {fileID: 591819969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15904,7 +15911,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9043998507446885971, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+      propertyPath: m_MainColor.b
+      value: 0.6766882
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043998507446885971, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+      propertyPath: m_MainColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043998507446885971, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+      propertyPath: m_MainColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043998508268574096, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.106
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9043998507446885971, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22505,14 +22529,10 @@ MonoBehaviour:
   defaultHealth: 100
   maximumHealth: 200
   currentHealth: 100
-  invincibilityTime: 3
   damageTaking: 20
-  useLives: 1
-  currentLives: 2
-  maximumLives: 5
-  respawnWaitTime: 3
   target: {fileID: 2126860123}
   ground: {fileID: 0}
+  image: {fileID: 0}
 --- !u!1001 &2130130538
 PrefabInstance:
   m_ObjectHideFlags: 0

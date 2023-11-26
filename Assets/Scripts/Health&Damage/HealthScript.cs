@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
@@ -11,23 +12,14 @@ public class HealthScript : MonoBehaviour
     public float maximumHealth = 200f;
     [Tooltip("The current in game health value")]
     public float currentHealth = 100f;
-    [Tooltip("Invulnerability duration, in seconds, after taking damage")]
-    public float invincibilityTime = 3f;
     [Tooltip("The amount of damage taken each hit")]
     public float damageTaking = 20f;
 
-    [Header("Lives settings")]
-    [Tooltip("Whether or not to use lives")]
-    public bool useLives = true;
-    [Tooltip("Current number of lives this health has")]
-    public int currentLives = 1;
-    [Tooltip("The maximum number of lives this health has")]
-    public int maximumLives = 5;
-    [Tooltip("The amount of time to wait before respawning")]
-    public float respawnWaitTime = 3f;
 
     public GameObject target;
     public GameObject ground;
+    public Image image;
+
 
     private Vector3 groundPosition;
     private Vector3 basePosition;
@@ -35,43 +27,30 @@ public class HealthScript : MonoBehaviour
     private void Start()
     {
         basePosition = target.transform.position;
+        image.fillAmount = 1 - (currentHealth / maximumHealth);
         groundPosition = ground.transform.position;
     }
 
     public void LooseHealth(float damage)
     {
         currentHealth -= damage;
+        image.fillAmount = 1 - (currentHealth / maximumHealth);
         if (currentHealth <= 0f)
         {
-            this.LooseLife(1);
+            Die();
         }
     }
     public void LooseHealth()
     {
         currentHealth -= damageTaking;
+        image.fillAmount = 1 - (currentHealth/maximumHealth);
         if (currentHealth <= 0f)
-        {
-            this.LooseLife(1);
-        }
-    }
-
-    public void LooseLife(int lives)
-    {
-        if (!useLives)
-        {
-            return;
-        }
-        currentLives -= lives;
-        if (currentLives <= 0)
         {
             Die();
         }
-        else
-        {
-            Respawn();
-            currentHealth = defaultHealth;
-        }
     }
+
+   
     public void Respawn()
     {
         target.transform.position = basePosition;
@@ -89,10 +68,6 @@ public class HealthScript : MonoBehaviour
 
     }
 
-    public int GetLives()
-    {
-        return currentLives;
-    }
 
     public float GetHitPoints()
     {

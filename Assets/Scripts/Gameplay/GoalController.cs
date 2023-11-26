@@ -24,6 +24,7 @@ public class GoalCounter : MonoBehaviour
             levelsCleared.Add(currentScene);
             this.GetComponentInParent<GroundController>().horizontalSpeed = 0;
             ground.GetComponent<GroundController>().horizontalSpeed = 0;
+            ground.GetComponent<GroundController>().verticalSpeed = 0;
             winText.enabled = true;
         }
     }

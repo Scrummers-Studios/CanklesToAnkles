@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3635957, g: 0.56776506, b: 0.8464569, a: 1}
+  m_IndirectSpecularColor: {r: 0.36354533, g: 0.56772864, b: 0.84645844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1583,7 +1583,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6575361420670268048, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6575361420660819168, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
     - {fileID: 6575361420660619288, guid: 80caef14f6db6344f9cc78c5af52bb2b, type: 3}
@@ -11620,6 +11621,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c33da84895a5c9847acf2dc393368406, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c33da84895a5c9847acf2dc393368406, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2a1efe45a0049144a93932f337ed14be, type: 2}
+    - target: {fileID: 5866666021909216657, guid: c33da84895a5c9847acf2dc393368406, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c33da84895a5c9847acf2dc393368406, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

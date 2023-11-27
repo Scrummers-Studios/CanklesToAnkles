@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private BoxCollider playerCollider;
     private Animator animator;
 
+    //Audio
+    public AudioSource playerAudio;
+    public AudioClip jump, roll;
 
     /// <summary>
     /// Initializes the player controller and its relevant components.
@@ -52,6 +55,12 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Update()
     {
+        //Audio for Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerAudio.clip = jump;
+            playerAudio.Play();
+        }
         // Jumping
         if (Input.GetKey(KeyCode.Space))
         {
@@ -64,6 +73,13 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
             animator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
+        }
+        
+        //Audio for rolling
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            playerAudio.clip = roll;
+            playerAudio.Play();
         }
 
         // Rolling

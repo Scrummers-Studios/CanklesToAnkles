@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     // Movement properties
     public float jumpingPower = 35;
     public bool isGrounded = true;
-    public bool isRolling = false;
+    public bool isCrouched = false;
     public bool isJumping = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
@@ -57,23 +57,26 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
-
+            animator.SetBool("isGrounded", false);
         }
         else
         {
             isJumping = false;
-
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isJumping", false);
         }
 
         // Rolling
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
-            isRolling = true;
+            isCrouched = true;
+            animator.SetBool("isCrouched", true);
         }
         else
         {
-            isRolling = false;
-
+            isCrouched = false;
+            animator.SetBool("isCrouched", false);
+            animator.SetBool("isGrounded", true);
         }
     }
 
@@ -96,7 +99,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerRollEvent()
     {
-        if (isRolling)
+        if (isCrouched)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
 

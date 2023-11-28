@@ -80,3 +80,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+Assets/Textures and Characters/Characters/LowPolyFoodLite/LowPolyFoodLite_2020.3.0_HDRP_v1.0.unitypackage.meta
+
+Assets/Textures and Characters/Characters/LowPolyFoodLite/LowPolyFoodLite_2020.3.0_URP_v1.0.unitypackage.meta

@@ -18,15 +18,21 @@ public class HealthScript : MonoBehaviour
 
     public GameObject target;
     public GameObject ground;
+    public GameObject enemies;
+    public GameObject pickUps;
     public Image image;
 
 
     private Vector3 groundPosition;
+    private Vector3 enemiesPosition;
+    private Vector3 pickUpsPosition;
     private Vector3 basePosition;
 
     private void Start()
     {
         basePosition = target.transform.position;
+        enemiesPosition = enemies.transform.position;
+        pickUpsPosition = pickUps.transform.position;
         image.fillAmount = 1 - (currentHealth / maximumHealth);
         groundPosition = ground.transform.position;
     }
@@ -56,6 +62,8 @@ public class HealthScript : MonoBehaviour
         target.transform.position = basePosition;
         target.GetComponent<Rigidbody>().velocity.Set(0, 0, 0);
         ground.transform.position = groundPosition;
+        enemies.transform.position = enemiesPosition;
+        pickUps.transform.position = pickUpsPosition;
     }
 
     private void Die()

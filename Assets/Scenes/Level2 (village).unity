@@ -1234,15 +1234,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1258,47 +1258,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35603744
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00025720568
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9258914
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.126343
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 13.541
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 137.306
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -5.281
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2230530226155236490, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
       propertyPath: m_Name
       value: Banana
       objectReference: {fileID: 0}
-    - target: {fileID: 4916021887616468903, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 2893829312826747886, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2230530226155236490, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1857938419}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
 --- !u!1001 &101727132
 PrefabInstance:
@@ -4356,10 +4353,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1166433501}
     m_Modifications:
-    - target: {fileID: 3389031601762257705, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 822083124791892931, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     - target: {fileID: 4816721914606352166, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
       propertyPath: m_Name
       value: Avocado
@@ -4419,39 +4416,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4816721914606352166, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 380548696}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
 --- !u!4 &380548694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5301791894072929692, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
   m_PrefabInstance: {fileID: 380548693}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &380548695 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4816721914606352166, guid: aa7a7f86756d6264089705ff022c30c0, type: 3}
-  m_PrefabInstance: {fileID: 380548693}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &380548696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380548695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9e0ec60fdb0ba4fbc532324cd5f49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 380548695}
-  player: {fileID: 2032263054}
-  dealDamageOnTriggerEvent: 0
-  damageAmount: 20
-  healOnTriggerEvent: 1
-  healAmount: 20
 --- !u!4 &386893888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498332, guid: 00ed5f0c12fd8d5499f54fb0096adab9, type: 3}
@@ -5204,6 +5175,14 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1697934817}
+    - target: {fileID: 4106810259258669351, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
+      propertyPath: enemies
+      value: 
+      objectReference: {fileID: 1498664803}
+    - target: {fileID: 4106810259258669351, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
+      propertyPath: pickUps
+      value: 
+      objectReference: {fileID: 1166433499}
     - target: {fileID: 5787948410724028897, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1
@@ -5389,34 +5368,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 497450, guid: c87a99b4c24b9ce48bac40727eb1ecb6, type: 3}
   m_PrefabInstance: {fileID: 1964991546}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &497771965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1765995492758009968, guid: cff631b005b811944a846f281776d825, type: 3}
-  m_PrefabInstance: {fileID: 895739983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &497771966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1425885333043045066, guid: cff631b005b811944a846f281776d825, type: 3}
   m_PrefabInstance: {fileID: 895739983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &497771967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497771965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9e0ec60fdb0ba4fbc532324cd5f49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 497771965}
-  player: {fileID: 2032263054}
-  dealDamageOnTriggerEvent: 1
-  damageAmount: 20
-  healOnTriggerEvent: 0
-  healAmount: 20
 --- !u!4 &506120472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 413494, guid: c2849fd453abd0445a702a035f04ac60, type: 3}
@@ -6133,7 +6089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7185b6a2a88610f4c802d555340a007b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2032263063}
   offset: {x: 0, y: 2, z: 0}
 --- !u!1001 &583455819
 PrefabInstance:
@@ -8679,6 +8635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5296666907831181005, guid: cff631b005b811944a846f281776d825, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     - target: {fileID: 6590085518315833816, guid: cff631b005b811944a846f281776d825, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -9489,17 +9449,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burger
       objectReference: {fileID: 0}
-    - target: {fileID: 6590085518315833816, guid: cff631b005b811944a846f281776d825, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 5296666907831181005, guid: cff631b005b811944a846f281776d825, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1765995492758009968, guid: cff631b005b811944a846f281776d825, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 497771967}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff631b005b811944a846f281776d825, type: 3}
 --- !u!4 &896148791 stripped
 Transform:
@@ -10640,18 +10597,6 @@ PrefabInstance:
       value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.114452
       objectReference: {fileID: 0}
@@ -10691,46 +10636,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6275758905170123359, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1798382716043602911, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 388876489497171537, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1071515916}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
 --- !u!4 &1071515914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021826422970944747, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
   m_PrefabInstance: {fileID: 1071515913}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1071515915 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 388876489497171537, guid: d0ddd93953187fd4195f9cea4a7b8a56, type: 3}
-  m_PrefabInstance: {fileID: 1071515913}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1071515916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071515915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9e0ec60fdb0ba4fbc532324cd5f49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1071515915}
-  player: {fileID: 2032263054}
-  dealDamageOnTriggerEvent: 0
-  damageAmount: 20
-  healOnTriggerEvent: 1
-  healAmount: 40
 --- !u!4 &1075048675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
@@ -18561,6 +18480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burger (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5296666907831181005, guid: cff631b005b811944a846f281776d825, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     - target: {fileID: 6590085518315833816, guid: cff631b005b811944a846f281776d825, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -19027,6 +18950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Burger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5296666907831181005, guid: cff631b005b811944a846f281776d825, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2032263054}
     - target: {fileID: 6590085518315833816, guid: cff631b005b811944a846f281776d825, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -19453,34 +19380,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 277c7d167d4d0af4aac55cdde94e2ff6, type: 3}
---- !u!1 &1857938417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2230530226155236490, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
-  m_PrefabInstance: {fileID: 100729104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1857938418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1567182029461747248, guid: 869b55c0dc2962d41a835b0eeb3c4b36, type: 3}
   m_PrefabInstance: {fileID: 100729104}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1857938419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857938417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9e0ec60fdb0ba4fbc532324cd5f49e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1857938417}
-  player: {fileID: 2032263054}
-  dealDamageOnTriggerEvent: 0
-  damageAmount: 20
-  healOnTriggerEvent: 1
-  healAmount: 20
 --- !u!1001 &1859367427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21567,6 +21471,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3651876168320076458, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
   m_PrefabInstance: {fileID: 476814451}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2032263063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5787948410724028897, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
+  m_PrefabInstance: {fileID: 476814451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2033061362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22590,6 +22499,8 @@ MonoBehaviour:
   damageTaking: 20
   target: {fileID: 2126860123}
   ground: {fileID: 0}
+  enemies: {fileID: 0}
+  pickUps: {fileID: 0}
   image: {fileID: 0}
 --- !u!1001 &2130130538
 PrefabInstance:

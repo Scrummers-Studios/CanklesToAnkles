@@ -8,7 +8,7 @@ public class GoalCounter : MonoBehaviour
 {
     public GameObject ground;
     public List<Scene> levelsCleared = new List<Scene>();
-    public TextMeshProUGUI winText;
+    public GameObject winScreen;
     private Scene currentScene;
     public GameObject player;
 
@@ -25,7 +25,7 @@ public class GoalCounter : MonoBehaviour
             this.GetComponentInParent<GroundController>().horizontalSpeed = 0;
             ground.GetComponent<GroundController>().horizontalSpeed = 0;
             ground.GetComponent<GroundController>().verticalSpeed = 0;
-            winText.enabled = true;
+            winScreen.SetActive(true);
         }
     }
 }

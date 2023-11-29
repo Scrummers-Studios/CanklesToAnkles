@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2822909817926051037, guid: 0c420034362447e47848857df35b7ec0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4012974977018118897, guid: 0c420034362447e47848857df35b7ec0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

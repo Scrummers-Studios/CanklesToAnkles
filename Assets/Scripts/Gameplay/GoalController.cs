@@ -15,6 +15,7 @@ public class GoalCounter : MonoBehaviour
     private void Start()
     {
         currentScene = SceneManager.GetActiveScene();
+        this.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void OnTriggerEnter(Collider player)
@@ -23,6 +24,7 @@ public class GoalCounter : MonoBehaviour
         {
             levelsCleared.Add(currentScene);
             this.GetComponentInParent<GroundController>().horizontalSpeed = 0;
+            this.GetComponentInParent<GroundController>().verticalSpeed = 0;
             ground.GetComponent<GroundController>().horizontalSpeed = 0;
             ground.GetComponent<GroundController>().verticalSpeed = 0;
             winScreen.SetActive(true);

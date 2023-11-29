@@ -27,6 +27,7 @@ public class GoalCounter : MonoBehaviour
             this.GetComponentInParent<GroundController>().verticalSpeed = 0;
             ground.GetComponent<GroundController>().horizontalSpeed = 0;
             ground.GetComponent<GroundController>().verticalSpeed = 0;
+            this.GetComponent<AudioSource>().Play();
             winScreen.SetActive(true);
             this.transform.GetChild(0).gameObject.SetActive(true);
         }

@@ -33,7 +33,7 @@ public class TutorialManager : MonoBehaviour
                 popUps[i].SetActive(true);
             } else
             {
-                popUps[i].SetActive(false); 
+                popUps[i].SetActive(false);
             }
         }
         if (popUpIndex == 0)
@@ -42,21 +42,24 @@ public class TutorialManager : MonoBehaviour
             {
                 popUpIndex++;
             }
-        } else if (popUpIndex == 1)
+        }
+        else if (popUpIndex == 1)
         {
-            
+
             if (Input.anyKeyDown)
             {
                 popUpIndex++;
             }
-        } else if (popUpIndex == 2)
+        }
+        else if (popUpIndex == 2)
         {
             if (Input.anyKeyDown)
             {
                 groundController.verticalSpeed = -4;
                 popUpIndex++;
             }
-        } else if (popUpIndex == 3)
+        }
+        else if (popUpIndex == 3)
         {
             groundController.verticalSpeed = 0;
             playerController.jumpingPower = 100;
@@ -66,8 +69,14 @@ public class TutorialManager : MonoBehaviour
                 popUpIndex++;
                 waitTime = 2f;
             }
-        } else if (popUpIndex == 4 && waitTime <= 0)
+        }
+        else if (popUpIndex == 4 && waitTime <= 0) 
         {
+            popUpIndex++;
+        }
+        else if (popUpIndex == 5)
+        {
+            playerController.jumpingPower = 0;
             groundController.verticalSpeed = 0;
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
@@ -75,7 +84,33 @@ public class TutorialManager : MonoBehaviour
                 popUpIndex++;
                 waitTime = 2f;
             }
-        } else if (popUpIndex == 5 && waitTime <= 0)
+        }
+        else if (popUpIndex == 6 && waitTime <= 0)
+        {
+            popUpIndex++;
+        }
+        else if (popUpIndex == 7)
+        {
+            groundController.verticalSpeed = 0;
+            if (Input.anyKeyDown)
+            {
+                popUpIndex++;
+                waitTime = 2f;
+            }
+        }
+        else if (popUpIndex == 8)
+        {
+            if (Input.anyKeyDown)
+            {
+                groundController.verticalSpeed = -4;
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 9 && waitTime <= 0)
+        {
+            popUpIndex++;
+        }
+        else if (popUpIndex == 10)
         {
             groundController.verticalSpeed = 0;
             if (Input.anyKeyDown)
@@ -84,7 +119,23 @@ public class TutorialManager : MonoBehaviour
                 popUpIndex++;
                 waitTime = 2f;
             }
-        } else {
+        }
+        else if (popUpIndex == 11 && waitTime <= 0)
+        {
+            popUpIndex++;
+        }
+        else if (popUpIndex == 12)
+        {
+            groundController.verticalSpeed = 0;
+            if (Input.anyKeyDown)
+            {
+                playerController.jumpingPower = 100;
+                groundController.verticalSpeed = -4;
+                popUpIndex++;
+            }
+        }
+        else
+        {
             waitTime -= Time.deltaTime;
         }
     }

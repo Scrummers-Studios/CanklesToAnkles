@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3635957, g: 0.56776506, b: 0.8464569, a: 1}
+  m_IndirectSpecularColor: {r: 0.3634665, g: 0.567704, b: 0.8464635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10323,7 +10323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5156514143117550414, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level3 (forest)
+      value: Level2 (village)
       objectReference: {fileID: 0}
     - target: {fileID: 5156514143117550414, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -17534,7 +17534,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Level3 (forrest)
+            m_StringArgument: Level2 (forrest)
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1528218517 stripped

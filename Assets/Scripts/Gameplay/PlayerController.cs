@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void UpdateGroundedStatus()
     {
-        float rayLength = .01f;
+        float rayLength = .1f;
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);

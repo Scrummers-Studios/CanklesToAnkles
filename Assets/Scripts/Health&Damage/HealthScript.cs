@@ -28,14 +28,14 @@ public class HealthScript : MonoBehaviour
     private void Start()
     {
         basePosition = target.transform.position;
-        image.fillAmount = 1 - (currentHealth / maximumHealth);
+        UpdateHealthBar();
         groundPosition = ground.transform.position;
     }
 
     public void LooseHealth(float damage)
     {
         currentHealth -= damage;
-        image.fillAmount = 1 - (currentHealth / maximumHealth);
+        UpdateHealthBar();
         if (currentHealth <= 0f)
         {
             Die();
@@ -44,14 +44,14 @@ public class HealthScript : MonoBehaviour
     public void LooseHealth()
     {
         currentHealth -= damageTaking;
-        image.fillAmount = 1 - (currentHealth/maximumHealth);
+        UpdateHealthBar();
         if (currentHealth <= 0f)
         {
             Die();
         }
     }
 
-   
+
     public void Respawn()
     {
         target.transform.position = basePosition;
@@ -61,10 +61,12 @@ public class HealthScript : MonoBehaviour
 
     private void Die()
     {
-        target.SetActive(false);
+        //target.SetActive(false);
         if (target.CompareTag("Player"))
         {
-            //GameManager display gameover and furthur handling
+            currentHealth = 100f;
+            Respawn();
+            UpdateHealthBar();
         }
 
     }
@@ -73,6 +75,11 @@ public class HealthScript : MonoBehaviour
     public float GetHitPoints()
     {
         return currentHealth;
+    }
+
+    private void UpdateHealthBar()
+    {
+        image.fillAmount = 1 - (currentHealth / maximumHealth);
     }
 
 }

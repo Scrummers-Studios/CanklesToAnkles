@@ -68,11 +68,12 @@ public class PlayerController : MonoBehaviour
         // Rolling
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) && Time.time - timeOfLastRoll >= 0.5f)
         {
-
             isRolling = true;
             animator.SetBool("isRolling", true);
+
+            timeOfLastRoll = Time.time;
         }
-        else
+        else if (Time.time - timeOfLastRoll >= 0.5f)
         {
             isRolling = false;
             animator.SetBool("isRolling", false);

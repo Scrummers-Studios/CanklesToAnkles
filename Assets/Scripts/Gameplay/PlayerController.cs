@@ -13,11 +13,22 @@ public class PlayerController : MonoBehaviour
 
     // Movement properties
     public float jumpingPower = 35;
-    public bool isGrounded = true;
-    public bool isCrouched = false;
-    public bool isJumping = false;
+    private bool isGrounded = true;
+    private bool isRolling = false;
+    private bool isJumping = false;
+    private bool isFalling = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
+
+    // Animation properties
+    // Jump 0-45
+    // l
+    private const int RollingAnimationFrames = 42;
+    private const int JumpingAnimationFrames = 42;
+    private float FPS;
+    private Time LastAnimation;
+    private bool InAnimation;
+
 
     // Player components
     private Rigidbody playerRigidBody;
@@ -42,23 +53,68 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
+
+        // Debugging properties
+        FPS = 1f / Time.deltaTime;
     }
 
     /// <summary>
     /// Called each frame.
-    /// Input related logic.
+    /// Deals with the player feedback.  
     /// 
     /// </summary>
-    /// TODO REFACTOR
     void Update()
     {
-        //Audio for Jumping
-        if (Input.GetKeyDown(KeyCode.Space))
+        CheckJumpAudio();
+        CheckJumpInput();
+        CheckRollAudio();
+        CheckRollInput();
+        Debug.Log("Frames per second: " + FPS);
+    }
+
+    /// <summary>
+    /// Checks if the player intends to roll
+    /// </summary>
+    private void CheckRollInput()
+    {
+
+
+
+        // Rolling
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
-            playerAudio.clip = jump;
+
+            isRolling = true;
+            animator.SetBool("isCrouched", true);
+        }
+        else
+        {
+            isRolling = false;
+            animator.SetBool("isCrouched", false);
+            animator.SetBool("isGrounded", true);
+        }
+    }
+
+    /// <summary>
+    /// Checks if the player themselves is rolling and outputs sound if its the case.
+    /// 
+    /// </summary>
+    private void CheckRollAudio()
+    {
+        //Audio for rolling
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            playerAudio.clip = roll;
             playerAudio.Play();
         }
+    }
 
+    /// <summary>
+    /// Checks if the player intends to jump
+    /// 
+    /// </summary>
+    private void CheckJumpInput()
+    {
         // Jumping
         if (Input.GetKey(KeyCode.Space))
         {
@@ -72,25 +128,18 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
         }
+    }
 
-        //Audio for rolling
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+    /// <summary>
+    /// Checks if the player is jumping and outputs sound if that is the case. 
+    /// </summary>
+    private void CheckJumpAudio()
+    {
+        //Audio for Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerAudio.clip = roll;
+            playerAudio.clip = jump;
             playerAudio.Play();
-        }
-
-        // Rolling
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
-        {
-            isCrouched = true;
-            animator.SetBool("isCrouched", true);
-        }
-        else
-        {
-            isCrouched = false;
-            animator.SetBool("isCrouched", false);
-            animator.SetBool("isGrounded", true);
         }
     }
 
@@ -101,8 +150,29 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         UpdateGroundedStatus();
+        UpdateFallingStatus();
         OnPlayerRollEvent();
         OnPlayerJumpEvent();
+    }
+
+
+    /// <summary>
+    /// Updates the current status concering wheter the player is falling
+    /// 
+    /// </summary>
+    void UpdateFallingStatus()
+    {
+        if (playerRigidBody.velocity.y <= 0)
+        {
+            isFalling = true;
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            isFalling = false;
+            animator.SetBool("isFalling", false);
+        }
+
     }
 
     /// <summary>
@@ -113,7 +183,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerRollEvent()
     {
-        if (isCrouched)
+        if (isRolling)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
 
@@ -161,12 +231,9 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerJumpEvent()
     {
 
-        // Temporary solution for bouncing
-        if (isGrounded && isJumping)
+        if (isGrounded && isJumping && !isRolling)
         {
             float momentum = playerRigidBody.velocity.y * playerRigidBody.mass;
-
-            Debug.Log("Required force to reset velocity" + momentum);
 
             // Resets the player momentum 
             playerRigidBody.AddForce(new UnityEngine.Vector3(0f, -momentum), ForceMode.Impulse);

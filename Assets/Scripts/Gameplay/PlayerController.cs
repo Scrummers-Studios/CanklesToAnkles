@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     public bool isJumping = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
-    public float lastJumpTime;
 
     // Player components
     private Rigidbody playerRigidBody;
@@ -43,9 +42,6 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
-
-
-        lastJumpTime = Time.time;
     }
 
     /// <summary>
@@ -61,6 +57,7 @@ public class PlayerController : MonoBehaviour
             playerAudio.clip = jump;
             playerAudio.Play();
         }
+
         // Jumping
         if (Input.GetKey(KeyCode.Space))
         {
@@ -74,7 +71,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
         }
-        
+
         //Audio for rolling
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
         {
@@ -150,7 +147,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void UpdateGroundedStatus()
     {
-        float rayLength = .01f;
+        float rayLength = .1f;
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
@@ -164,7 +161,6 @@ public class PlayerController : MonoBehaviour
     {
 
         // Temporary solution for bouncing
-        // Physics: Jump equation, sqrt(2*g*h)
         if (isGrounded && isJumping)
         {
             float momentum = playerRigidBody.velocity.y * playerRigidBody.mass;

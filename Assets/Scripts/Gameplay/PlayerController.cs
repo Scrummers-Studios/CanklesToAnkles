@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
     private float BASE_PLAYER_DEPTH;
 
     // Movement properties
+    // TODO Make private.
     public float jumpingPower = 35;
-    private bool isGrounded = true;
-    private bool isRolling = false;
-    private bool isJumping = false;
-    private bool isFalling = false;
+    public bool isGrounded = true;
+    public bool isRolling = false;
+    public bool isJumping = false;
+    public bool isLanding = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
 
@@ -77,21 +78,17 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void CheckRollInput()
     {
-
-
-
         // Rolling
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
         {
 
             isRolling = true;
-            animator.SetBool("isCrouched", true);
+            animator.SetBool("isRolling", true);
         }
         else
         {
             isRolling = false;
-            animator.SetBool("isCrouched", false);
-            animator.SetBool("isGrounded", true);
+            animator.SetBool("isRolling", false);
         }
     }
 
@@ -120,12 +117,10 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
-            animator.SetBool("isGrounded", false);
         }
         else
         {
             isJumping = false;
-            animator.SetBool("isGrounded", true);
             animator.SetBool("isJumping", false);
         }
     }
@@ -150,7 +145,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         UpdateGroundedStatus();
-        UpdateFallingStatus();
+        UpdateLandingStatus();
         OnPlayerRollEvent();
         OnPlayerJumpEvent();
     }
@@ -160,18 +155,12 @@ public class PlayerController : MonoBehaviour
     /// Updates the current status concering wheter the player is falling
     /// 
     /// </summary>
-    void UpdateFallingStatus()
+    void UpdateLandingStatus()
     {
-        if (playerRigidBody.velocity.y <= 0)
-        {
-            isFalling = true;
-            animator.SetBool("isFalling", true);
-        }
-        else
-        {
-            isFalling = false;
-            animator.SetBool("isFalling", false);
-        }
+        float rayLength = 1f;
+
+        isLanding = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
+        animator.SetBool("isLanding", isLanding);
 
     }
 
@@ -191,7 +180,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y - 0.5f, playerRigidBody.position.z);
                 correctedPlayerColliderIncrease = true;
-                animator.SetBool("isCrouched", true);
+                animator.SetBool("isRolling", true);
             }
 
             correctedPlayerColliderDecrease = false;
@@ -204,7 +193,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerRigidBody.position = new UnityEngine.Vector3(playerRigidBody.position.x, playerRigidBody.position.y + 0.5f, playerRigidBody.position.z);
                 correctedPlayerColliderDecrease = true;
-                animator.SetBool("isCrouched", false);
+                animator.SetBool("isRolling", false);
 
             }
 
@@ -222,6 +211,10 @@ public class PlayerController : MonoBehaviour
 
         // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
+
+        animator.SetBool("isGrounded", isGrounded);
+
+
     }
 
     /// <summary>
@@ -241,7 +234,6 @@ public class PlayerController : MonoBehaviour
             // Changes the players velocity based on the pre-defined jumping force
             playerRigidBody.AddForce(new UnityEngine.Vector3(0f, jumpingPower), ForceMode.Impulse);
 
-            animator.SetBool("isJumping", true);
         }
     }
 }

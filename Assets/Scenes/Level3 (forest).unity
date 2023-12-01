@@ -917,9 +917,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 64949851404236068, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 9b5f5a435d1ecf144a17a7a569ad8cc4, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399705602053630321, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6334664
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399705602053630321, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399705602053630321, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
+      propertyPath: m_Center.y
+      value: 0.20471993
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2170,6 +2182,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 401752, guid: 9211b397ed1fec54fa30bd8c8b657e1f, type: 3}
   m_PrefabInstance: {fileID: 1799818382}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &458826685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 332044548722329092, guid: 60854e66b68b9444e901de8d30a5d4b2, type: 3}
+  m_PrefabInstance: {fileID: 213126829262109420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &458826690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458826685}
+  m_Material: {fileID: 13400000, guid: 9b5f5a435d1ecf144a17a7a569ad8cc4, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4545717, y: 0.7432643, z: 0.72360057}
+  m_Center: {x: 0.012369931, y: 0.37163216, z: 0.032796323}
 --- !u!4 &588125707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c33da84895a5c9847acf2dc393368406, type: 3}
@@ -3834,6 +3872,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 9b5f5a435d1ecf144a17a7a569ad8cc4, type: 2}
+    - target: {fileID: 64794764187669184, guid: 1a59f0a7e65a5b04aa48968eb0720fbc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 64794764187669184, guid: 1a59f0a7e65a5b04aa48968eb0720fbc, type: 3}
       propertyPath: m_Material
       value: 
@@ -5504,7 +5546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90da032fe5f21d42b2e799fd43ed448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_axis_speed: 7
+  x_axis_speed: 2
   z_axis_speed: 0
   y_axis_speed: 0
 --- !u!4 &1712257106
@@ -6828,6 +6870,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 857806513}
     m_Modifications:
+    - target: {fileID: 323822222522982534, guid: 60854e66b68b9444e901de8d30a5d4b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 601953751780312436, guid: 60854e66b68b9444e901de8d30a5d4b2, type: 3}
       propertyPath: m_Name
       value: TemplateEnviromentMountain_3
@@ -6875,7 +6921,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 332044548722329092, guid: 60854e66b68b9444e901de8d30a5d4b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 458826690}
   m_SourcePrefab: {fileID: 100100000, guid: 60854e66b68b9444e901de8d30a5d4b2, type: 3}
 --- !u!1001 &736745687394903921
 PrefabInstance:
@@ -7565,11 +7614,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1079334988}
-  - {fileID: 205848472}
   - {fileID: 1480261149}
+  - {fileID: 205848472}
+  - {fileID: 401262535}
   - {fileID: 1239879446}
   - {fileID: 1712257106}
-  - {fileID: 401262535}
   - {fileID: 4641284932857939919}
   - {fileID: 1329688623}
   - {fileID: 164430862}

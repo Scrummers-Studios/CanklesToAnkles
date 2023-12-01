@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36349136, g: 0.56771225, b: 0.8464619, a: 1}
+  m_IndirectSpecularColor: {r: 0.3634665, g: 0.567704, b: 0.8464635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1029,6 +1029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1520300125295017843, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
+      propertyPath: m_Constraints
+      value: 114
+      objectReference: {fileID: 0}
     - target: {fileID: 3324262254873289646, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1791,7 +1795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5864089502348973859, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.519348
+      value: 6.602306
       objectReference: {fileID: 0}
     - target: {fileID: 5864089502348973859, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1799,7 +1803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5864089502348973859, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.606737
+      value: -8.618246
       objectReference: {fileID: 0}
     - target: {fileID: 5864089502348973859, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5409,6 +5413,11 @@ Transform:
 --- !u!1 &519720062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3651876168320076458, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
+  m_PrefabInstance: {fileID: 117547306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &519720071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5787948410724028897, guid: 203106f892e9c574b9c2b20d6ba3a309, type: 3}
   m_PrefabInstance: {fileID: 117547306}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &520069364
@@ -10314,7 +10323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5156514143117550414, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level3 (forest)
+      value: Level2 (village)
       objectReference: {fileID: 0}
     - target: {fileID: 5156514143117550414, guid: 0a69a2078d1cf134aa5d22918a576b85, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -16617,12 +16626,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1308053114}
     m_Modifications:
     - target: {fileID: 789516662252869298, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 941.5932
+      objectReference: {fileID: 0}
+    - target: {fileID: 789516662252869298, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 142.7113
+      objectReference: {fileID: 0}
+    - target: {fileID: 789516662252869298, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.5847
       objectReference: {fileID: 0}
     - target: {fileID: 789516662252869298, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 58.2454
       objectReference: {fileID: 0}
     - target: {fileID: 1439563819288606957, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_Pivot.x
@@ -16707,7 +16724,9 @@ PrefabInstance:
     - target: {fileID: 4892215573155273452, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_text
       value: When working out, your diet is just as important as the exercise. You
-        should eat greens and stay away from fast food!
+        should eat fruit and stay away from fast food! Above you can see your diabetes
+        bar, if it fills up you will die. Eating fast food will fill the bar, and
+        fruit will lower it.
       objectReference: {fileID: 0}
     - target: {fileID: 4892215573155273452, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_fontSize
@@ -16720,6 +16739,22 @@ PrefabInstance:
     - target: {fileID: 6809980313053339174, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_Name
       value: Health bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866179999221637264, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 953.2899
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866179999221637264, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 181.8775
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866179999221637264, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.5849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866179999221637264, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 90.9388
       objectReference: {fileID: 0}
     - target: {fileID: 8016604139998311489, guid: c807c2d36bb7d0843a511bf230910951, type: 3}
       propertyPath: m_Name
@@ -17499,7 +17534,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Level3 (forrest)
+            m_StringArgument: Level2 (forrest)
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!4 &1528218517 stripped
@@ -21442,7 +21477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495864, guid: adfab66261f199c4f848aa0427e46248, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3014798
+      value: 1.5514798
       objectReference: {fileID: 0}
     - target: {fileID: 495864, guid: adfab66261f199c4f848aa0427e46248, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25165,15 +25200,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245275880238120981, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_FollowOffset.x
-      value: 4.1067357
+      value: 5.3549438
       objectReference: {fileID: 0}
     - target: {fileID: 7245275880238120981, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_FollowOffset.z
-      value: 18.51935
+      value: 0.13185883
       objectReference: {fileID: 0}
+    - target: {fileID: 8082620355915859460, guid: 634573055dd7de0478e77a35affcbead, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 519720071}
     - target: {fileID: 8567843420973394520, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.519348
+      value: 6.602306
       objectReference: {fileID: 0}
     - target: {fileID: 8567843420973394520, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25181,7 +25220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8567843420973394520, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.606737
+      value: -8.618246
       objectReference: {fileID: 0}
     - target: {fileID: 8567843420973394520, guid: 634573055dd7de0478e77a35affcbead, type: 3}
       propertyPath: m_LocalRotation.w

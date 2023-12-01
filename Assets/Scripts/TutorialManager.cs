@@ -20,7 +20,7 @@ public class TutorialManager : MonoBehaviour
         {
             playerController = FindObjectOfType<PlayerController>();
         }
-        groundController.verticalSpeed = 0;
+        groundController.z_axis_speed = 0;
         playerController.jumpingPower = 0;
     }
 
@@ -31,7 +31,8 @@ public class TutorialManager : MonoBehaviour
             if (i == popUpIndex)
             {
                 popUps[i].SetActive(true);
-            } else
+            }
+            else
             {
                 popUps[i].SetActive(false);
             }
@@ -55,32 +56,32 @@ public class TutorialManager : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 3)
         {
-            groundController.verticalSpeed = 0;
+            groundController.z_axis_speed = 0;
             playerController.jumpingPower = 100;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
                 waitTime = 2f;
             }
         }
-        else if (popUpIndex == 4 && waitTime <= 0) 
+        else if (popUpIndex == 4 && waitTime <= 0)
         {
             popUpIndex++;
         }
         else if (popUpIndex == 5)
         {
             playerController.jumpingPower = 0;
-            groundController.verticalSpeed = 0;
+            groundController.z_axis_speed = 0;
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
                 waitTime = 2f;
             }
@@ -91,7 +92,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 7)
         {
-            groundController.verticalSpeed = 0;
+            groundController.z_axis_speed = 0;
             if (Input.anyKeyDown)
             {
                 popUpIndex++;
@@ -102,7 +103,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
             }
         }
@@ -112,10 +113,10 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 10)
         {
-            groundController.verticalSpeed = 0;
+            groundController.z_axis_speed = 0;
             if (Input.anyKeyDown)
             {
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
                 waitTime = 2f;
             }
@@ -126,11 +127,11 @@ public class TutorialManager : MonoBehaviour
         }
         else if (popUpIndex == 12)
         {
-            groundController.verticalSpeed = 0;
+            groundController.z_axis_speed = 0;
             if (Input.anyKeyDown)
             {
                 playerController.jumpingPower = 100;
-                groundController.verticalSpeed = -4;
+                groundController.z_axis_speed = 4;
                 popUpIndex++;
             }
         }

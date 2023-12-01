@@ -5,13 +5,13 @@ using UnityEngine;
 // Test change
 public class GroundController : MonoBehaviour
 {
-    public int horizontalSpeed = 0;
-    public int verticalSpeed = 0;
+    public int x_axis_speed = 0;
+    public int z_axis_speed = 0;
 
     // Update is called once per frame
     void Update()
     {
         // Assumes that forward direction is along x-axis
-        transform.Translate(new Vector3(-horizontalSpeed, 0, verticalSpeed) * Time.deltaTime);
+        transform.Translate(new Vector3(-x_axis_speed, 0, -z_axis_speed) * Time.deltaTime);
     }
 }

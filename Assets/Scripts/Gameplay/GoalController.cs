@@ -20,13 +20,13 @@ public class GoalCounter : MonoBehaviour
 
     private void OnTriggerEnter(Collider player)
     {
-        if(player == this.player.GetComponent<Collider>())
+        if (player == this.player.GetComponent<Collider>())
         {
             levelsCleared.Add(currentScene);
-            this.GetComponentInParent<GroundController>().horizontalSpeed = 0;
-            this.GetComponentInParent<GroundController>().verticalSpeed = 0;
-            ground.GetComponent<GroundController>().horizontalSpeed = 0;
-            ground.GetComponent<GroundController>().verticalSpeed = 0;
+            this.GetComponentInParent<GroundController>().x_axis_speed = 0;
+            this.GetComponentInParent<GroundController>().z_axis_speed = 0;
+            ground.GetComponent<GroundController>().x_axis_speed = 0;
+            ground.GetComponent<GroundController>().z_axis_speed = 0;
             this.GetComponent<AudioSource>().Play();
             winScreen.SetActive(true);
             this.transform.GetChild(0).gameObject.SetActive(true);

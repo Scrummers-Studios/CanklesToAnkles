@@ -20,16 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool isLanding = false;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
-
-    // Animation properties
-    // Jump 0-45
-    // l
-    private const int RollingAnimationFrames = 42;
-    private const int JumpingAnimationFrames = 42;
-    private float FPS;
-    private Time LastAnimation;
-    private bool InAnimation;
-
+    private float timeOfLastRoll;
 
     // Player components
     private Rigidbody playerRigidBody;
@@ -54,9 +45,6 @@ public class PlayerController : MonoBehaviour
         BASE_PLAYER_WIDTH = playerCollider.size.x;
         BASE_PLAYER_HEIGHT = playerCollider.size.y;
         BASE_PLAYER_DEPTH = playerCollider.size.z;
-
-        // Debugging properties
-        FPS = 1f / Time.deltaTime;
     }
 
     /// <summary>
@@ -70,7 +58,6 @@ public class PlayerController : MonoBehaviour
         CheckJumpInput();
         CheckRollAudio();
         CheckRollInput();
-        Debug.Log("Frames per second: " + FPS);
     }
 
     /// <summary>
@@ -79,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private void CheckRollInput()
     {
         // Rolling
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) && Time.time - timeOfLastRoll >= 0.5f)
         {
 
             isRolling = true;
@@ -172,7 +159,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerRollEvent()
     {
-        if (isRolling)
+        if (isRolling && isGrounded)
         {
             playerCollider.size = new UnityEngine.Vector3(BASE_PLAYER_WIDTH, BASE_PLAYER_HEIGHT * 0.5f, BASE_PLAYER_DEPTH);
 

@@ -136,4 +136,4 @@ MonoBehaviour:
   dealDamageOnTriggerEvent: 0
   damageAmount: 20
   healOnTriggerEvent: 1
-  healAmount: 40
+  healAmount: 50

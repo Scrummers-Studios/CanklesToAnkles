@@ -134,6 +134,6 @@ MonoBehaviour:
   target: {fileID: 1765995492758009968}
   player: {fileID: 0}
   dealDamageOnTriggerEvent: 1
-  damageAmount: 20
+  damageAmount: 30
   healOnTriggerEvent: 0
   healAmount: 20

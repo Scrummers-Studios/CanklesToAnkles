@@ -1,7 +1,6 @@
 using UnityEngine;
 
 // Continiously translates its respective body linearly along the specified axis. 
-// TODO Refactor navn
 public class GroundController : MonoBehaviour
 {
     // Speed parameters

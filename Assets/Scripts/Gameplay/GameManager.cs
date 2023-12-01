@@ -7,11 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public SceneManager sceneManager;
-
-    public GameObject ui;
-
+    public GameObject UI;
     public List<String> scenes;
-
     public bool allowPauseGame = true;
     private bool isPaused = false;
 
@@ -27,7 +24,7 @@ public class GameManager : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0f;
-            ui.SetActive(true);
+            UI.SetActive(true);
 
             // Turns off post-processing
             Camera.main.gameObject.GetComponent<PostProcessVolume>().enabled = true;
@@ -37,7 +34,7 @@ public class GameManager : MonoBehaviour
         else if (!allowPauseGame)
         {
             Time.timeScale = 1f;
-            ui.SetActive(true);
+            UI.SetActive(true);
 
             // Turns on post-processing
             Camera.main.gameObject.GetComponent<PostProcessVolume>().enabled = true;
@@ -45,7 +42,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Time.timeScale = 1f;
-            ui.SetActive(false);
+            UI.SetActive(false);
 
             // Turns on post-processing
             Camera.main.gameObject.GetComponent<PostProcessVolume>().enabled = false;

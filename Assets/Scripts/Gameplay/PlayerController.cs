@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
     private float BASE_PLAYER_DEPTH;
 
     // Movement properties
-    // TODO Make private.
     public float jumpingPower = 35;
-    public bool isGrounded = true;
+    private bool isGrounded = true;
+    private bool isJumping = false;
+
+    // Rolling
     public bool isRolling = false;
-    public bool isJumping = false;
-    public bool isLanding = false;
+    private const float ROLL_DURATION = 0.5f;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
     private float timeOfLastRoll;
@@ -48,32 +49,32 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Called each frame.
-    /// Deals with the player feedback.  
+    /// Called each frame and deals with player input and audio.
     /// 
     /// </summary>
     void Update()
     {
-        CheckJumpAudio();
         CheckJumpInput();
-        CheckRollAudio();
+        CheckJumpAudio();
         CheckRollInput();
+        CheckRollAudio();
     }
 
     /// <summary>
-    /// Checks if the player intends to roll
+    /// Checks if the player intends to roll and enforces this if the player is not already rolling.
+    /// 
     /// </summary>
     private void CheckRollInput()
     {
         // Rolling
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) && Time.time - timeOfLastRoll >= 0.5f)
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl) && Time.time - timeOfLastRoll >= ROLL_DURATION)
         {
             isRolling = true;
             animator.SetBool("isRolling", true);
 
             timeOfLastRoll = Time.time;
         }
-        else if (Time.time - timeOfLastRoll >= 0.5f)
+        else if (Time.time - timeOfLastRoll >= ROLL_DURATION)
         {
             isRolling = false;
             animator.SetBool("isRolling", false);
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks if the player themselves is rolling and outputs sound if its the case.
+    /// Checks if the player themselves is rolling and outputs sound if thats the case.
     /// 
     /// </summary>
     private void CheckRollAudio()
@@ -133,30 +134,15 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         UpdateGroundedStatus();
-        UpdateLandingStatus();
         OnPlayerRollEvent();
         OnPlayerJumpEvent();
-    }
-
-
-    /// <summary>
-    /// Updates the current status concering wheter the player is falling
-    /// 
-    /// </summary>
-    void UpdateLandingStatus()
-    {
-        float rayLength = 1f;
-
-        isLanding = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
-        animator.SetBool("isLanding", isLanding);
-
     }
 
     /// <summary>
     ///  Handles the player rolling
     ///  
     /// Adapts the player collider size depending on whether the player is rolling or not while 
-    /// ensureing that the collider remains in same vertical posistion.
+    /// ensuring that the collider remains in same vertical posistion.
     /// </summary>
     private void OnPlayerRollEvent()
     {
@@ -196,13 +182,8 @@ public class PlayerController : MonoBehaviour
     private void UpdateGroundedStatus()
     {
         float rayLength = .1f;
-
-        // Checks if the player is grounded
         isGrounded = Physics.Raycast(playerCollider.bounds.center, UnityEngine.Vector3.down, playerCollider.bounds.extents.y + rayLength);
-
         animator.SetBool("isGrounded", isGrounded);
-
-
     }
 
     /// <summary>

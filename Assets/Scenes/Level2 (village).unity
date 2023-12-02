@@ -1555,6 +1555,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3521183244205273612, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521183244205273612, guid: 2d1bb18e2bcf1574ba0f271bec79d2bd, type: 3}
       propertyPath: field of view
       value: 60.000004
       objectReference: {fileID: 0}
@@ -18031,6 +18035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x_axis_speed: 0
   z_axis_speed: 4
+  y_axis_speed: 0
 --- !u!1001 &1697986176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22605,9 +22610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpingPower: 75
-  isGrounded: 1
-  isCrouched: 0
-  isJumping: 0
+  isRolling: 0
   playerAudio: {fileID: 0}
   jump: {fileID: 0}
   roll: {fileID: 0}

@@ -1,6 +1,9 @@
 using UnityEngine;
 
-// Continiously translates its respective body linearly along the specified axis. 
+/// <summary>
+/// Continiously translates its respective body linearly along the specified axis. 
+/// 
+/// </summary>
 public class GroundController : MonoBehaviour
 {
     // Speed parameters

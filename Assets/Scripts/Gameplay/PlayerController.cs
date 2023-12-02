@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float BASE_PLAYER_DEPTH;
 
     // Movement properties
-    public float jumpingPower = 35;
+    public float jumpingPower = 100;
     private bool isGrounded = true;
     private bool isJumping = false;
 

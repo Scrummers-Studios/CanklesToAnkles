@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Class for managing the gamestate.  
 ///
-/// </summary>
+///</summary>
 public class GameManager : MonoBehaviour
 {
     public GameObject UI;

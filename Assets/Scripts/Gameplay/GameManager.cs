@@ -4,18 +4,28 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class for managing the gamestate.  
+///
+/// </summary>
 public class GameManager : MonoBehaviour
 {
-    public SceneManager sceneManager;
     public GameObject UI;
-    public List<String> scenes;
     public bool allowPauseGame = true;
     private bool isPaused = false;
 
     // Update is called once per frame
     void Update()
     {
+        CheckPauseGame();
+    }
 
+    /// <summary>
+    ///  Checks if player intends to pause the game and does if allowed.
+    ///
+    /// </summary>
+    private void CheckPauseGame()
+    {
         if (allowPauseGame && Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseGame();
@@ -49,6 +59,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Toggles the pause of the game
+    /// 
+    /// </summary>
     public void TogglePauseGame()
     {
         isPaused = !isPaused;
@@ -62,11 +76,6 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene("Level1");
-
-    }
 
 
 }

@@ -233,6 +233,9 @@ In the development of our game, I primarily focused on two critical areas: level
 To enhance the visual appeal and maintain consistency with the games polygonal style, I updated the skybox, ensuring that it aesthetically fit with the rest of the game.    
 Another vital aspect of my role was developing the camera functionality. I created a Playertracker, which allows the player to move out of bounds along the x-axis while ensuring the camera follows along the y-axis. Furthermore, I integrated Cinemachine Virtual Camera to enable the player to catch up with the camera.  
 
+###### **Sivert Ertshus**
+During the development of this game I created the characters and set up character rigs along with parts of the animations and sounds. I also created the design for the different user interfaces. To tell a more detailed story of the game, I created the two story videos that get played in the game.   
+
 ## Manual
 The game "The Weight Escape" is built for WebGL, Mac and Windows.
 When starting the game, the player sees the main menu. Here the player has a total of four choices. Play game, which brings the player right into the story of the game. Settings, which lets the player change the volume in the game. Controls, which opens up a image where the player sees the controls. Quit game, which stops the game from running.

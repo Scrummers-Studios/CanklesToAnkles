@@ -67,22 +67,26 @@ To achieve a jumping mechanic that fits the "cartoony" style of this game I chan
 In the end this approach was sufficient for our purposes, but in retrospect it might have been better not using physics at all for this type of game. The thought process was that if we intend to add any special features like changing perspective, movement, interactions or any similar features the usage of the built-in API would save time and resources. Given the timeframe a short-term approach without physics only using transforms might've been better as the utilization of physics posed problems throughout the development process.
 
 
-<p align="center">
-  <img src="/docs/imgs/stuck_gif.gif" alt="animated" />
-</p>
-
 The first problem was a relative simple one which was linked to the fact that the API calculates friction meaning when the player collider was in contact with obstacles it would stop the player from moving. The solution to this was to create *Physics Material* for the obstacles and player reducing the friction allowing the player to jump while in contact. 
 
+<p align="center">
+  <img src="/docs/imgs/stuck_20fps.gif" alt="animated" />
+</p>
+
+
+Another problem encountered came in the form of the so called "Airlaunch-bug" which was triggered in scenarios where the player jumps in oblique direction making the player trigger the jumping mechanic twice launching the player towards the air. Meaning the collision detection using the "*CompareTag*" approach would not suffice. One solution to this wouldve been to remove the depth the ground have and make it concave, but this would for lack of a better word remove the "rugged" feel of the game.
 
 <p align="center">
   <img src="/docs/imgs/Airlaunch_gif.gif" alt="animated" />
 </p>
 
-Another problem encountered came in the form of the so called "Airlaunch-bug" which was triggered in scenarios where the player jumps in oblique direction making the player trigger the jumping mechanic twice launching the player towards the air. Meaning the collision detection using the "*CompareTag*" approach would not suffice. One solution to this wouldve been to remove the depth the ground have and make it concave, but this would for lack of a better word remove the "rugged" feel of the game.
 
 To solve this  I took use of the built-in *Raycasting* and  directed it below the player to prevent registering collisions with other surfaces than the bottom. As a final note on this subject, it would be wise to implement a layer mask to this *Raycasting* to filter what should be considered a collision making the player grounded, which is not implemented as of now.
 
-(Momentum gif)
+
+<p align="center">
+  <img src="/docs/imgs/momentun_bug_gif.gif" alt="animated" />
+</p>
 
 With the solution of using *Raycasting* to another problem occurred with the player jumping shorter based on its current momentum as since the *Raycasting* makes it so the collider does not actually collide the momentum is carried on to the next jump, meaning if the player has negative velocity upon pressing jump it will jump shorter than intended. To solve this problem I considered multiple different approaches such as implemented a jumping delay.  A delay would solve the problem but is not optimal as the game is based around fast-paced gameplay and this would limit this. And compromising on the sole mechanic of the game is not ideal. Ultimately the solution I went for was nullifying the momentum in order to make the jump height constant as the initial conditions will then be the same for every jump.
 
@@ -92,7 +96,7 @@ With the solution of using *Raycasting* to another problem occurred with the pla
 </p>
 
 ##### My Contribution
-**Petter Edvardsen**
+###### **Petter Edvardsen**
 During this project I created the gameplay logic surrounding the player movement and mechanics  , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
 
 #####  References

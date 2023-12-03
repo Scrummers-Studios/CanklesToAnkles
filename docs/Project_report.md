@@ -42,6 +42,18 @@ For the level itself  the Forest level  is composed of primarily 4 handmade sub-
 
 The obstacles is what engages the player in this genre of games and is therefore important as it is what forces the player to make choices. With that in mind this level challenges the players reaction time and control by establishing and breaking patterns that occur in a fast manner forcing the player to adapt. Additionally the increase in speed makes it so the player can be challenged in precision and timing by constructing obstacles that has to be maneuvered in a certain way to survive.
 
+
+*This is the sub-enviroments allowing for the modular apporach of the level*
+
+<p align="center">
+  <img src="/docs/imgs/Temp_Env1.png"/>
+  <img src="/docs/imgs/Template_Env2.png" />
+  <img src="/docs/imgs/Temp_env3.png" />
+  <img src="/docs/imgs/Temp_Env4.png" />
+</p>
+
+
+
 <p align="center">
   <img src="/docs/imgs/Obstacles_1.png"/>
   <img src="/docs/imgs/Obstacles_1_2.png" />

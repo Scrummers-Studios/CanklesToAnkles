@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3636986, g: 0.56780785, b: 0.84644985, a: 1}
+  m_IndirectSpecularColor: {r: 0.36346617, g: 0.5677026, b: 0.84646344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13301,6 +13301,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 494247990}
+    - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 494247990}
@@ -18034,7 +18038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x_axis_speed: 0
-  z_axis_speed: 4
+  z_axis_speed: 6
   y_axis_speed: 0
 --- !u!1001 &1697986176
 PrefabInstance:
@@ -18225,6 +18229,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443662, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64145882203110256, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -20755,11 +20763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3400002
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22610,7 +22618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpingPower: 75
-  isRolling: 0
   playerAudio: {fileID: 0}
   jump: {fileID: 0}
   roll: {fileID: 0}

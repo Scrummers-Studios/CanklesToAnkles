@@ -228,6 +228,11 @@ As a whole our thoughts is that the final product is inline with our initial exp
 ###### **Petter Edvardsen**
 During this project I created the gameplay logic surrounding the player movement and mechanics(PlayerController) , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
 
+###### **Harald W Fredriksen**
+In the development of our game, I primarily focused on two critical areas: level design and camera development. My responsibility encompassed the creation and design of various levels, specifically the first level (Tutorial), level two (Village), and level four (City). Additionally, I contributed to the design and creation of obstacles on the third level (Forest). 
+To enhance the visual appeal and maintain consistency with the games polygonal style, I updated the skybox, ensuring that it aesthetically fit with the rest of the game.    
+Another vital aspect of my role was developing the camera functionality. I created a Playertracker, which allows the player to move out of bounds along the x-axis while ensuring the camera follows along the y-axis. Furthermore, I integrated Cinemachine Virtual Camera to enable the player to catch up with the camera.  
+
 ## Manual
 The game "The Weight Escape" is built for WebGL, Mac and Windows.
 When starting the game, the player sees the main menu. Here the player has a total of four choices. Play game, which brings the player right into the story of the game. Settings, which lets the player change the volume in the game. Controls, which opens up a image where the player sees the controls. Quit game, which stops the game from running.

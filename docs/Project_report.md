@@ -42,15 +42,15 @@ Our decision to employ a low poly art style was instrumental in shaping the leve
 The tutorial level was created using assets from the [Synthy Studios Student pack]( https://assetstore.unity.com/student-plan-pack1)[^2]. This level was created from scratch placing roads, grass, trees and so on until we had a clean looking introduction level. We then needed to implement some tutorialmanager that tells the player the basics of the game. This was done through a script that goes through popUps one by one, and demands some kind of key to be pressed and/or time to pass to get the next pupUp. In the gif below we can see how these pop ups function. 
 
 <p align="center">
-  <img src="/docs/imgs/village_house.png"/>
+  <img src="/docs/imgs/tutorial_showcase.gif" alt="animated" />
 </p>
 
 ### Village level
 
-This is the first full level created for "Weight Escape". This level was created entirely by drag and drop from the asset folder, and duplication of placed assets. 
+This is the first full level created for "Weight Escape". This level was created entirely by drag and drop from the asset folder, and duplication of placed assets. It starts easy with a few obstacles and pickups, with some woods in the background. Later we enter a village and end up jumping across rooftops before we get out of the village again and approach goal. 
 
 <p align="center">
-  <img src="/docs/imgs/tutorial_showcase.gif" alt="animated" />
+  <img src="/docs/imgs/village_house.png"/>
 </p>
 
 ### Forest level

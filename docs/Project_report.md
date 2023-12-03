@@ -189,11 +189,15 @@ The production phase was a tremendous learning experience. One key insight was t
 
 ### Tools
 
-The game engine we used to develop our game was the Unity engine. Unity was made famous for its popularity between indie game developers, and fits perfectly for game developers wanting to create smaller games quickly. Using unity to develop our game went pretty smooth, the only inconsistency with it, was mostly caused by our version control system.
-Working in a team of four and therefore not being able to use Unity Teams for free meant we had to use some other sort of version control system, and since we all had experience with github, we used this. However, we did experience some difficulties using git. For instance, the scene files are rendered in text when comparing in git, and therefore makes it very hard to merge two scene changes together. 
-For communication purposes we used discord, seeing as this was well known for everyone. We created our own channels for sharing files, web pages and other files and other channels for discussion. We also had a voice channel for online meetings, which we could talk and stream to each other to more easily collaborate. We took use of our discord channel for both when we worked together, to plan our next meeting or other tasks and ask about stuff when working alone.
-Our level weighs heavily on the story aspect for its humor, and it was therefore important for us to have a humorous introduction to our games story and therefore created the introduction video that plays in the beginning of our game. To create these videos we used an editor tool called Clipchamp. Its a standard editor tool where you can easily add and edit images, video and sound. To create the images we used in these story videos we used the popular AI tool called ChatGPT. By feeding it with prompts about what we wanted to illustrate he generated these pictures that we then used in our video. 
-Kan sivert skriv litt om blender og sivert eller petter om sida vi henta animasjonan fra 
+For the development of “Weight Escape”, we selected the Unity engine as our primary game development platform. Unity’s popularity among indie game developers, coupled with its suitability for creating smaller-scale games, made it an ideal for our project. The development process with Unity was generally smooth, with the main challenges arising from our version control system rather than the engine itself. 
+
+Due to the size of our team, which consisted of four members, we were too many for the free tier of Unity Teams. Consequently, we opted to use GitHub for our version control and collaboration, as we all had prior experience with the platform. Despite this, we encountered some technical issues with git, particularly with scene file management. The text rendering of scene files in Git introduced difficulties in merging changes, making the version control process somewhat challenging.  
+
+Our team utilized Discord for communication. We established dedicated channels for file sharing, web links, and general discussions, as well as a voice channel for online meetings. This setup allowed for effective collaboration, allowing us to stream work sessions, plan meetings, and provide assistance during both collaborative and independent work phases. 
+
+A pivotal aspect of “Weight Escape” is its story-driven humor. To effectively show this humorous narrative, we created an introductory video that plays at the game’s beginning. For video production, we used Clipchamp, a standard editing tool used for hangling images, video and sound editing. In the creation of visuals for these videos we used ChatGPT, an advanced AI tool. By inputting detailed prompts, ChatGPT generated the required images that we then used in our video
+
+#Kan sivert skriv litt om blender og sivert eller petter om sida vi henta animasjonan fra 
 
 ### Our experience
 

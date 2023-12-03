@@ -202,7 +202,9 @@ Our team utilized Discord for communication. We established dedicated channels f
 
 A pivotal aspect of “Weight Escape” is its story-driven humor. To effectively show this humorous narrative, we created an introductory video that plays at the game’s beginning. For video production, we used Clipchamp, a standard editing tool used for hangling images, video and sound editing. In the creation of visuals for these videos we used ChatGPT, an advanced AI tool. By inputting detailed prompts, ChatGPT generated the required images that we then used in our video
 
-#Kan sivert skriv litt om blender og sivert eller petter om sida vi henta animasjonan fra 
+To create a unique design which would fit the character Blender was used. The player was given a red track suit, which sticks out in all the levels and gives the character a colorful presence. There was also a attempt to add some details to the face of the character, but due to the player only  being seen from the side, these features are not noticed. 
+
+To give the character smooth animations, pre-made animations were picked from the animation library at Mixamo. Here we were able to pick out the animations that looked the best, and along with the animator in Unity, we were able to give the character clean animations. 
 
 ## Our experience
 

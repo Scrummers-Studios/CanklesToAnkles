@@ -36,6 +36,13 @@ The design of these levels was meticulously carried out within the Unity engine,
 
 Our decision to employ a low poly art style was instrumental in shaping the level design. The style’s popularity made it easy to find available assets in the Unity store which afforded us the possibility to achieve a particular vision or design element. This was, we had a bigger possibility to design levels exactly how we planned.  
 
+### Tutorial level
+
+The tutorial level was created using assets from the [Synthy Studios Student pack]( https://assetstore.unity.com/student-plan-pack1)[^2]. This level was created from scratch placing roads, grass, trees and so on until we had a clean looking introduction level. We then needed to implement some tutorialmanager that tells the player the basics of the game. This was done through a script that goes through popUps one by one, and demands some kind of key to be pressed and/or time to pass to get the next pupUp. In the gif below we can see how these pop ups function. 
+
+<p align="center">
+  <img src="/docs/imgs/tutorial.gif" alt="animated" />
+</p>
 
 ### Forest level
 For the level itself  the Forest level  is composed of primarily 4 handmade sub-environments which also are sampled from the [Synthy Studios Student pack]( https://assetstore.unity.com/student-plan-pack1)[^2]. This is done to create a dynamic background which can be extended as far as needed, which can be practical when creating a runner game because it allows us to create a level length however long that's needed while still having a semi-dynamic background. The level itself is created in such a manner where each template forms a basis for that area which is then filled which obstacles. The obstacles too are segmented into batches and are placed in areas. This segmentation gives the level design process a modular approach which makes changes based on playtesting easy.

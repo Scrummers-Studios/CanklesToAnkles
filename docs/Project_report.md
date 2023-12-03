@@ -15,9 +15,8 @@ The pre-production phase consisted of in-person brainstorming sessions. Meeting 
 The technical development of our game was executed using the Unity engine, with GitHub as our collaboration platform. Initially, we focused on using branches to manage code contributions. However, we encountered significant merge conflicts due to Unity’s auto-generated files and text-formatted scenes, which proved complex to merge. To address this, we shifted to a simpler workflow, with team members working directly in the main branch. Frequent commits and clear communication regarding who was working on specific scenes were key practices in this approach. Despite some challenges with Git, including loss of changes or asset modifications, this method proved to be more productive for our team.
 
 ### Story
-
+  
 ### Aesthetics
-
 In “Weight Escape”, each level’s environment is rendered in a low poly style, encompassing the background, obstacles and skybox to maintain a cohesive aesthetic. This stylistic choice was driven by several strategic considerations. Primarily, the low poly style allows for the game to look good while also ensuring optimal game performance, with reduced load times and smoother gameplay. 
 Another factor influencing our decision was the availability of Synty Studios’ Polygon educational pack, which offered high-quality low poly assets at no cost. This resource was invaluable in achieving a visually appealing and consistent look of our game without exceeding our  budget. 
 The vibrant and colorful nature of the low poly style significantly enhances the game’s overall appeal. It imparts a playful and whimsical vibe, aligning perfectly with the game’s humorous theme. This aesthetic choice not only contributes to the game’s visual attractiveness but also complements its fun and engaging narrative. 
@@ -54,12 +53,14 @@ The obstacles is what engages the player in this genre of games and is therefore
   <img src="/docs/imgs/Obstacles_1.png"/>
   <img src="/docs/imgs/Obstacles_1_2.png" />
 </p>
-*This sequence of obstacles plays on this aspect by forcing the player to Roll to dodge a series of pick-ups to then break the pattern by encountering positive pickups which if dodged leads to taking damage.*
+
+*This sequence of obstacles plays on this aspect by forcing the player to Roll to dodge a series of pick-ups to then break the pattern by encountering positive pickups which if dodged leads to taking damage*
 
 <p align="center">
   <img src="/docs/imgs/Obstacles_seg_2.png" />
 </p>
-*In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame. *
+
+*In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame*
 
 ### Characters
 “Cankles to Ankles” is a game which takes players on a journey of a man trying to transform his physique from a heavy build to a leaner build. The game consists of a total of four playable levels where one can see a gradual size decrease for each level. The process to start creating the characters, two pre-made characters were chosen. The skinny character remained the same, while for the heavier character, 3 versions were made. 

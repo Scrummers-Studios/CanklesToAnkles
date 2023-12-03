@@ -29,14 +29,7 @@ The post processing is divided into two volumes, one which is applied during the
 
 
 ### Level design and Enviroment
-In the development of “Weight Escape”, our vision was to craft a game with diverse levels, each having its own distinct theme or aesthetic. We designed four levels, encompassing three unique environmental designs.
-The first two levels are situated in villages, giving a medieval vibe. These levels feature dirt roads, rustic wooden huts, and medieval carriages, immersing the player in an old-world atmosphere.
-Transitioning from the medieval villages, the third level plunges the player into a dark, enchanting forest. This environment is characterized by dense, darker trees under a starlit night sky, creating a calm yet magical ambiance, the contrast between the dark foliage and the luminous celestial canopy adds a layer of mystique to the player’s journey.
-The final stage of the game is set in a city. This level represents a significant scale-up in both size and detail compared to its predecessors. The city backdrop includes towering buildings, different vehicles, and crossing roads, which gives the city life. A key feature of this level is the innovative and humorous path the player must navigate. For instance, the player must jump from one rooftop to another, to do this he must leap from signboards entangled in power lines. These playful and imaginative design elements are intended to captivate players, encouraging them to complete the level in order to discover all the fun scenarios we, as developers, have made for them. 
-In terms of environmental animation, we made a strategic decision to forego this feature. As the game is very fast-paced, detailed animations in the environment would likely go unnoticed and would consume valuable development resources without significantly enhancing the gameplay experience. Our focus remained on ensuring a smooth, visually engaging run-through for the player. 
 
----
-Level design
 In “Weight Escape”, players traverse through four distinct levels, each with unique obstacles and thematic environments. The settings vary from villages and mystical forests to modern cityscapes. As the game progresses, the levels increase in difficulty, presenting a more challenging experience to the player. This escalation is achieved through a combination of faster gameplay speed, increased frequency of obstacles, and more difficult jumps and dodges.
 
 The design of these levels was meticulously carried out within the Unity engine, utilizing assets from Synty Studios’ educational asset pack. These assets were strategically arranged to construct the levels’ backgrounds, grounds, and various obstacles. Key to our design process was the creation of prefabs for certain obstacles, allowing to reuse and place these throughout the levels. 

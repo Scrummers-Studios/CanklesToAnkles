@@ -24,6 +24,7 @@ The obstacles is what engages the player in this genre of games and is therefore
 
 ![[Pasted image 20231203124403.png]]
 *In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame. 
+
 ### Playercontroller
 
 In terms of the gameplay the player is comprised of a *Collider* and a *RigidBody* provided by the Unity Engine. The *Collider* serves the role of detecting collisions between the player and his surroundings while the *Rigidbody* is used for manipulating the players position by using the Physics API provided by Unity. The implementation of these are present in the *PlayerController* where the logic of the mechanics and the interactions the player faces resides. 
@@ -40,7 +41,14 @@ The *RigidBody* as previously mentioned deals with the player's position and the
 
 ![[Pasted image 20231203134105.png]]
 
-(Gif av trajectories, sammenligning
+(Gif av trajectories, sammenligning)
+
+<p align="center">
+  <img src="/docs/imgs/Jump_gravity.gif" alt="animated" />
+  <img src="/docs/imgs/Jump_custom_grav.gif" alt="animated" />
+</p>
+
+
 To achieve a jumping mechanic that fits the "cartoony" style of this game I changed the gravity of the player upon descent making the jump two-part. This makes it so the player falls faster and allows for faster response as the player will have less air-time and makes the jump less "floaty". The implementation is a modified version of the "Super-Mario-jump"[^3].
 
 In the end this approach was sufficient for our purposes, but in retrospect it might have been better not using physics at all for this type of game. The thought process was that if we intend to add any special features like changing perspective, movement, interactions or any similar features the usage of the built-in API would save time and resources. Given the timeframe a short-term approach without physics only using transforms might've been better as the utilization of physics posed problems throughout the development process.

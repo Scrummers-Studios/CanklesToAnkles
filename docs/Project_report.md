@@ -76,6 +76,13 @@ The obstacles is what engages the player in this genre of games and is therefore
 </p>
 *In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame. *
 
+
+<p align="center">
+  <img src="/docs/imgs/Obstacles_seg_3.png" />
+</p>
+
+*Up until this point in the level the player is conditoned to jump upon traversing and will be punished if him/her does not react to the changes.* 
+
 ### Characters
 “Cankles to Ankles” is a game which takes players on a journey of a man trying to transform his physique from a heavy build to a leaner build. The game consists of a total of four playable levels where one can see a gradual size decrease for each level. The process to start creating the characters, two pre-made characters were chosen. The skinny character remained the same, while for the heavier character, 3 versions were made. 
 

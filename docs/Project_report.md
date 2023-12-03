@@ -8,10 +8,7 @@ The logic surrounding theuser interface is simple and based around the two class
 
 ### User interface layout:
 The user interface layout attempts to appeal to the familiarity to the player. The layout itself consists of a sidemenu and such. As the game is now the amount of information that needs to be displayed is minimal giving a lot of freedom when it comes to design. Given this we opted for a basic sidemenu to see the character and game in pause and menu and a centered controls and settings page. 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4f4c655a52c6b4a6a4b313af3d7a17a1f984da85
 ### Animations:
 The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take.  These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted . The conditions for the transitions are based on the physics properties of the player which are updated during the *FixedUpdate* which is dialed up to 100 calculations per second as a rough estimate meaning all framerates equal to or below this will not be affected.
 
@@ -29,20 +26,15 @@ The obstacles is what engages the player in this genre of games and is therefore
   <img src="/docs/imgs/Obstacles_1.png"/>
   <img src="/docs/imgs/Obstacles_1_2.png" />
 </p>
-<<<<<<< HEAD
+
 *This sequence of obstacles plays on this aspect by forcing the player to Roll to dodge a series of pick-ups to then break the pattern by encountering positive pickups which if dodged leads to taking damage.* 
-=======
-*This sequence of obstacles plays on this aspect by forcing the player to Roll to dodge a series of pick-ups to then break the pattern by encountering positive pickups which if dodged leads to taking damage.*
->>>>>>> 4f4c655a52c6b4a6a4b313af3d7a17a1f984da85
 
 <p align="center">
   <img src="/docs/imgs/Obstacles_seg_2.png" />
 </p>
-<<<<<<< HEAD
+
 *In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame.*
-=======
-*In this segment the player is challenged on his/hers precision and timing to be able to jump at the right time to stay on top of the rocks avoiding negative pick-ups and staying in frame. *
->>>>>>> 4f4c655a52c6b4a6a4b313af3d7a17a1f984da85
+
 
 ### Playercontroller
 
@@ -105,11 +97,11 @@ With the solution of using *Raycasting* to another problem occurred with the pla
   <img src="/docs/imgs/Jump_code.png" />
 </p>
 
-##### My Contribution
+### My Contribution
 ###### **Petter Edvardsen**
 During this project I created the gameplay logic surrounding the player movement and mechanics  , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
 
-#####  References
+###  References
 [^1]:  https://www.coursera.org/learn/game-design-and-development-2/home/week/1
 [^2]:  https://assetstore.unity.com/student-plan-pack1
 [^3]: https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity

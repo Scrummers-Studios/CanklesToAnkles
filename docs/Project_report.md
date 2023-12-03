@@ -221,8 +221,10 @@ Final product?
 During this project I created the gameplay logic surrounding the player movement and mechanics  , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
 
 ### Manual
-
-
+The game "The Weight Escape" is built for WebGL, Mac and Windows.
+When starting the game, the player sees the main menu. Here the player has a total of four choices. Play game, which brings the player right into the story of the game. Settings, which lets the player change the volume in the game. Controls, which opens up a image where the player sees the controls. Quit game, which stops the game from running.
+When playing the game the character runs on its own, but the player needs to jump and rolle to dodge obstacles. To make the character jump, the player presses space to jump and ctrl to make it rolle, and if the player ever needs to see the controls again, they can press the esc button on the keyboard, and one will be able to see the same settings as they did on the main menu. The differences are that instead of play game, it says resume game, and instead of quit game, it brings one back to the main menu. 
+When finishing a level, a win menu pops up. Here the player is given the choice to either continue to the next level or go back to the main menu.
 
 
 

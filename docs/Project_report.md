@@ -181,15 +181,11 @@ When creating the characters, multiple tools were used to get the desired charac
 
 
 ## Game development process
-...
-
 
 ### Pre-production
 Our pre-production phase consisted of brainstorming as a group and outlining what type of game we are creating. This meant defining our goals and the scope of the game. Given the short timeframe and limited budget we quickly landed on a "Runner" type game as a game which is simple in premise, but can easily be expanded upon should there be an oppertunity for it. As we have no experience with game development between us we had to create a plan for how to move forward aswell as who should research what. The details concerning planning, scope and goals are outlined in the High-level document.
 
-
-## Production
-
+### Production
 During the production phase, our team adopted a structured approach, organizing our workflow into two-week sprints. Each team member was assigned specific tasks to be completed within these intervals. At the end of each sprint, we reviewed our progress, discuss any challenges encountered, and shared the solutions we implemented. We created sprint reports from these sessions, documenting our accomplishments and any issues faced. 
 
 The development process mostly took place remotely, as most team members had access to superior hardware at their homes compared to their laptops, which were not optimally equipped for running our game on Unity. To manage tasks efficiently, we maintained a dynamic task list, enabling team members to pick up new tasks upon completing their current ones. Communication was facilitated through Discord, allowing for continuous collaboration, discussion of fixes, and other requests or questions, despite working from different locations. For version control and collaborative coding, we utilized GitHub. 
@@ -214,7 +210,6 @@ To give the character smooth animations, pre-made animations were picked from th
 
 ## Our experience
 
-
 ### Testing
 
 As a developer one often becomes blind to the things being done. It’s easy to think that new implementations are easy for users to understand, but this is not always the case to new players. Throughout the project we have had people test our game at various stages to ensure that the player understands what the game is, how to play it and if they understand what they see in front of them. This includes everything from the UIs a player sees through the game, the levels and the controlling of the character.
@@ -225,10 +220,8 @@ By week 47 we had several improvements. The design of the UI was improved to mak
 
 Final product?   
 
-
 ### Reflections
 As a whole our thoughts is that the final product is inline with our initial expectations. We are satisfied with mulitple aspects of the game which makes it a playable and challenging fun adventure. Looking back at our initial expectations and goals in the pre-production phase it is apparent that we have underestimated the amount of skill and work it takes to make games look good. Where the biggest challenge was animation and character modeling. In retrospect we should have invested more resources into animations as it is a crucial part of making the game feel fluent and responsive which might be the most important quality in a game like this. But given the limitations of our team not having any experience with artistry, we accept the final result. 
-
 
 ## My contribution
 

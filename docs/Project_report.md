@@ -24,7 +24,6 @@ The technical development of our game was executed using the Unity engine, with 
 
 ### Project Description
 
-
 ### Story
 
 ### Aesthetics
@@ -55,12 +54,8 @@ The design of these levels was meticulously carried out within the Unity engine,
 
 Our decision to employ a low poly art style was instrumental in shaping the level design. The style’s popularity made it easy to find available assets in the Unity store which afforded us the possibility to achieve a particular vision or design element. This was, we had a bigger possibility to design levels exactly how we planned.  
 
-The gameplay mechanics include two primary actions for the player: Jumping and rolling. Accordingly, we designed two main types of obstacles. The low obstacles, which the player can jump on or over, and the high obstacles, which the player must roll under. We strategically positioned these obstacles to create challenges that are difficult yet possible for the player. 
-Petter kan du legg tel korsn vi merka utfordring på at spillern satt fast i obstacles og korsn vi klart å løs det?
 
-
-
-### Level design
+### Forest level
 For the level itself  the Forest level  is composed of primarily 4 handmade sub-environments which also are sampled from the [Synthy Studios Student pack]( https://assetstore.unity.com/student-plan-pack1)[^2]. This is done to create a dynamic background which can be extended as far as needed, which can be practical when creating a runner game because it allows us to create a level length however long that's needed while still having a semi-dynamic background. The level itself is created in such a manner where each template forms a basis for that area which is then filled which obstacles. The obstacles too are segmented into batches and are placed in areas. This segmentation gives the level design process a modular approach which makes changes based on playtesting easy.
 
 The obstacles is what engages the player in this genre of games and is therefore important as it is what forces the player to make choices. With that in mind this level challenges the players reaction time and control by establishing and breaking patterns that occur in a fast manner forcing the player to adapt. Additionally the increase in speed makes it so the player can be challenged in precision and timing by constructing obstacles that has to be maneuvered in a certain way to survive.
@@ -85,7 +80,6 @@ When trying to use the different characters for animations, we discovered that t
 
 Animation details?
 
-
 ### Gameplay
 Gameplay for this game is fairly simple. In our game the goal is to reach the end of each level. The character moves constantly, and the player uses space to jump and ctrl to dodge obstacles. If the character gets caught by an obstacle and falls too far behind the camera, the level resets. In addition to obstacles there are both healthy and unhealthy foods that manipulate the “diabetes bar”. This is the character’s health, the bar fills up as the player gets closer to diabetes, and lowers if the player interacts with healthy foods. These foods and obstacles are spread through the different levels.
 
@@ -95,7 +89,7 @@ Since the character is struggling with obesity, it would be natural that the goa
 The game is designed to make the environment, pickups, goal and everything related to the level moves rather than the player. The character and the camera are somewhat static, the player can only be moved by the obstacles that are placed throughout the levels, and the camera moves to track the player with some delay. If the player gets caught by the terrain for too long, the character will move out of the view of the camera, this is one of our loose conditions. Allowing the player to be “still” or caught in the terrain, the diabetes wins and the character dies. This happens also if the character “eats” too much unhealthy food, this is our second loose condition. “Cankles to Ankles” does only have one win condition, clear all the levels, become fit. In order to achieve this the player needs to guide the player traversing the different levels, avoiding the obstacles and unhealthy food. After traversing all the levels, the player will have achieved the goal of the game. In order to traverse from one level to the other, the player has to reach the end of the level. The different length of the levels vary and depend both on the speed of the level as well as the difficulty of the level. At the end of each level, there is a goal. This goal activates the win screen, which gives the player positive feedback on clearing a level. From this windscreen the player can choose to move to the next level or return to the main menu.
 
 ### Game control
-???
+The controls for this game is catered to keyboard users as this is primarily a PC game. Altough the controls are simple enough for most devices we have not put any resources into controls for other platforms than PC. 
 
 
 ### Animations:

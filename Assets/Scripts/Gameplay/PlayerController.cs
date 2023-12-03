@@ -32,6 +32,16 @@ public class PlayerController : MonoBehaviour
     public AudioSource playerAudio;
     public AudioClip jump, roll;
 
+
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0, 100, 100), (1.0f / Time.smoothDeltaTime).ToString());
+    }
+
+
+
+
     /// <summary>
     /// Initializes the player controller and its relevant components.
     /// 
@@ -104,13 +114,13 @@ public class PlayerController : MonoBehaviour
         // Jumping
         if (Input.GetKey(KeyCode.Space))
         {
-            isJumping = true;
             animator.SetBool("isJumping", true);
+            isJumping = true;
         }
         else
         {
-            isJumping = false;
             animator.SetBool("isJumping", false);
+            isJumping = false;
         }
     }
 

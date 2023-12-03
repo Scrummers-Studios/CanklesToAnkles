@@ -1,17 +1,9 @@
 # Final report
 
-
 ### Overview
 “Weight Escape” is an engaging 2.5D runner game developed using the Unity engine, blended elements of action, adventure, comedy and platforming genres. The game is designed to offer a balance of entertaining story and escalating challenge, appealing to a broad spectrum of players ranging from children to young adults.
 Weight Escape has a captivating and humorous backstory. Players take on the role of an overweight character who embarks on a journey for a better life. On this journey the player must dodge a variety of obstacles in order to succeed. 
 Aesthetically, the game environment is crafted in a polygon style, contrasting the main character's whimsical cartoon style. 
-
-
-### Objectives
-The objectives for this game is simply to survive the incoming obstacles and enemies as long as needed to finish the level. To accomplish this the player has to make rapid desicions with presice timing to be able to carry out the objective.
-
-### Scope
-The scope of our project contains the development of “Cankles to Ankles” from a concept to a complete project. Our focus went to using the Unity engine to create the game, and using the scrum method to ensure constant progress and to finish before the deadline. The scope covers the story development, character design, level environments, gameplay mechanics, user interface, sound design, and the overall aesthetics. 
 
 ### Methodology
 Our team’s collective objective was the development of our game, for which we adopted scrum as our project management methodology. For transparency, we collaborated through both physical meetings and virtual via Discord. This approach ensured that all team members were continually informed of each other’s challenges and progress, creating a supportive and collaborative environment.
@@ -22,8 +14,6 @@ To organize task management and avoid duplication of efforts, we utilized a shar
 The pre-production phase consisted of in-person brainstorming sessions. Meeting physically was preferred to enhance team cohesion and ensure consensus on the game’s concept and storyline. This phase’s efficiency was pivotal in laying a strong foundation for the game’s development and made it possible to start developing our game early. 
 The technical development of our game was executed using the Unity engine, with GitHub as our collaboration platform. Initially, we focused on using branches to manage code contributions. However, we encountered significant merge conflicts due to Unity’s auto-generated files and text-formatted scenes, which proved complex to merge. To address this, we shifted to a simpler workflow, with team members working directly in the main branch. Frequent commits and clear communication regarding who was working on specific scenes were key practices in this approach. Despite some challenges with Git, including loss of changes or asset modifications, this method proved to be more productive for our team.
 
-### Project Description
-
 ### Story
 
 ### Aesthetics
@@ -33,18 +23,18 @@ Another factor influencing our decision was the availability of Synty Studios’
 The vibrant and colorful nature of the low poly style significantly enhances the game’s overall appeal. It imparts a playful and whimsical vibe, aligning perfectly with the game’s humorous theme. This aesthetic choice not only contributes to the game’s visual attractiveness but also complements its fun and engaging narrative. 
 The runner game genre, traditionally aligns with the 2D genre. However, we opted to develop it in 2.5D to add an extra dimension of depth. This decision was made to enrich the visual experience and provide a sense of immersion that a purely 2D perspective may not fully capture. The 2.5D approach creates a unique feel to the game, enhancing the overall player experience. 
 
+#### Visuals
+
 ##### Post-processing
 The post processing is divided into two volumes, one which is applied during the pause screen to the *MenuCamera*  to highlight the user interface and clearly convey to the player that the game is paused.  The other volume is applied to the *GameplayCamera*  to create a more vibrant atmosphere by increasing the color saturation which is a common characteristic of "cartoony" games. 
 
 
 ### Level design and Enviroment
-
 In the development of “Weight Escape”, our vision was to craft a game with diverse levels, each having its own distinct theme or aesthetic. We designed four levels, encompassing three unique environmental designs.
 The first two levels are situated in villages, giving a medieval vibe. These levels feature dirt roads, rustic wooden huts, and medieval carriages, immersing the player in an old-world atmosphere.
 Transitioning from the medieval villages, the third level plunges the player into a dark, enchanting forest. This environment is characterized by dense, darker trees under a starlit night sky, creating a calm yet magical ambiance, the contrast between the dark foliage and the luminous celestial canopy adds a layer of mystique to the player’s journey.
 The final stage of the game is set in a city. This level represents a significant scale-up in both size and detail compared to its predecessors. The city backdrop includes towering buildings, different vehicles, and crossing roads, which gives the city life. A key feature of this level is the innovative and humorous path the player must navigate. For instance, the player must jump from one rooftop to another, to do this he must leap from signboards entangled in power lines. These playful and imaginative design elements are intended to captivate players, encouraging them to complete the level in order to discover all the fun scenarios we, as developers, have made for them. 
 In terms of environmental animation, we made a strategic decision to forego this feature. As the game is very fast-paced, detailed animations in the environment would likely go unnoticed and would consume valuable development resources without significantly enhancing the gameplay experience. Our focus remained on ensuring a smooth, visually engaging run-through for the player. 
-
 
 ---
 Level design
@@ -78,7 +68,13 @@ It started by importing the overweight character into Blender, where a red track
 
 When trying to use the different characters for animations, we discovered that the characters who were scaled didn’t look good when running, jumping etc. To fix this, the rigging of the characters where the animations didn’t work properly were removed. The characters were then imported into Mixamo where a new rig was fitted and added. When the character then was imported again into Unity the animations worked as they should.  
 
-Animation details?
+#### Animations:
+The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take.  These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted . The conditions for the transitions are based on the physics properties of the player which are updated during the *FixedUpdate* which is dialed up to 100 calculations per second as a rough estimate meaning all framerates equal to or below this will not be affected.
+
+*Animation logic and 1st iteration of animations*
+<p align="center">
+  <img src="/docs/imgs/Animations_logic.png"/>
+</p>
 
 ### Gameplay
 Gameplay for this game is fairly simple. In our game the goal is to reach the end of each level. The character moves constantly, and the player uses space to jump and ctrl to dodge obstacles. If the character gets caught by an obstacle and falls too far behind the camera, the level resets. In addition to obstacles there are both healthy and unhealthy foods that manipulate the “diabetes bar”. This is the character’s health, the bar fills up as the player gets closer to diabetes, and lowers if the player interacts with healthy foods. These foods and obstacles are spread through the different levels.
@@ -88,20 +84,7 @@ Since the character is struggling with obesity, it would be natural that the goa
 ### Game mechanics
 The game is designed to make the environment, pickups, goal and everything related to the level moves rather than the player. The character and the camera are somewhat static, the player can only be moved by the obstacles that are placed throughout the levels, and the camera moves to track the player with some delay. If the player gets caught by the terrain for too long, the character will move out of the view of the camera, this is one of our loose conditions. Allowing the player to be “still” or caught in the terrain, the diabetes wins and the character dies. This happens also if the character “eats” too much unhealthy food, this is our second loose condition. “Cankles to Ankles” does only have one win condition, clear all the levels, become fit. In order to achieve this the player needs to guide the player traversing the different levels, avoiding the obstacles and unhealthy food. After traversing all the levels, the player will have achieved the goal of the game. In order to traverse from one level to the other, the player has to reach the end of the level. The different length of the levels vary and depend both on the speed of the level as well as the difficulty of the level. At the end of each level, there is a goal. This goal activates the win screen, which gives the player positive feedback on clearing a level. From this windscreen the player can choose to move to the next level or return to the main menu.
 
-### Game control
-The controls for this game is catered to keyboard users as this is primarily a PC game. Altough the controls are simple enough for most devices we have not put any resources into controls for other platforms than PC. 
-
-
-### Animations:
-The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take.  These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted . The conditions for the transitions are based on the physics properties of the player which are updated during the *FixedUpdate* which is dialed up to 100 calculations per second as a rough estimate meaning all framerates equal to or below this will not be affected.
-
-*Animation logic and 1st iteration of animations*
-<p align="center">
-  <img src="/docs/imgs/Animations_logic.png"/>
-</p>
-
 #### Playercontroller
-
 In terms of the gameplay the player is comprised of a *Collider* and a *RigidBody* provided by the Unity Engine. The *Collider* serves the role of detecting collisions between the player and his surroundings while the *Rigidbody* is used for manipulating the players position by using the Physics API provided by Unity. The implementation of these are present in the *PlayerController* where the logic of the mechanics and the interactions the player faces resides. 
 
 As mentioned *PlayerController* manipulates the player based on given parameters, these parameters can be tweaked meaning changes can be made from player feedback  in order to create the desired movement. 
@@ -164,11 +147,10 @@ With the solution of using *Raycasting* to another problem occurred with the pla
 
 ### User interface
 
-
-###  User-interface logic
+####  User-interface logic
 The logic surrounding theuser interface is simple and based around the two classes *LevelManager* and *Levelswitcher* where the intention is that if a object is supposed to change the level it will simply incorporate the *LevelSwitcher* script. This way maintains a loose coupling between the manager and the objects that incorporate this feautre. This approach is inspired by the Scene management from the [2D-platformer ](https://www.coursera.org/learn/game-design-and-development-2/home/week/1) game from the course[^1]. 
 
-### User interface layout:
+#### User interface layout:
 The user interface layout attempts to appeal to the familiarity to the player. The layout itself consists of a sidemenu and such. As the game is now the amount of information that needs to be displayed is minimal giving a lot of freedom when it comes to design. Given this we opted for a basic sidemenu to see the character and game in pause and menu and a centered controls and settings page. 
 
 

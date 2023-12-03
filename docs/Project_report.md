@@ -77,14 +77,12 @@ The animation system simply consists of 4 animations, Running which serves as th
   <img src="/docs/imgs/Animations_logic.png"/>
 </p>
 
-## Gameplay
+## Gameplay and Gameplay Mecahnics
 The gameplay for this game is fairly simple. In our game the goal is to reach the end of each level. The character moves constantly, and the player uses space to jump and ctrl to dodge obstacles. If the character gets caught by an obstacle and falls too far behind the camera, the level resets. In addition to obstacles there are both healthy and unhealthy foods that manipulate the “diabetes bar”. This is the character’s health, the bar fills up as the player gets closer to diabetes, and lowers if the player interacts with healthy foods. These foods and obstacles are spread through the different levels.
 
-*Since the character is struggling with obesity, it would be natural that the goal in this game is to turn the characters bad habits and run. As mentioned earlier the obstacles are designed to hinder the player from reaching the goal, and requires both usage of good timing, jumping and crouching. Alongside the obstacles the food gives the player more interaction with the game, and makes the gameplay more fulfilling.*
+The game is designed to make the environment, pickups, goal and everything related to the level moves rather than the player. The character and the camera are somewhat static, the player can only be moved by the obstacles that are placed throughout the levels, and the camera moves to track the player with some delay. If the player gets caught by the terrain for too long, the character will move out of the view of the camera, this is one of our loose conditions. Allowing the player to be “still” or caught in the terrain, the diabetes wins and the character dies. This happens also if the character “eats” too much unhealthy food, this is our second loose condition. 
 
-
-*### Game mechanics
-The game is designed to make the environment, pickups, goal and everything related to the level moves rather than the player. The character and the camera are somewhat static, the player can only be moved by the obstacles that are placed throughout the levels, and the camera moves to track the player with some delay. If the player gets caught by the terrain for too long, the character will move out of the view of the camera, this is one of our loose conditions. Allowing the player to be “still” or caught in the terrain, the diabetes wins and the character dies. This happens also if the character “eats” too much unhealthy food, this is our second loose condition. “Cankles to Ankles” does only have one win condition, clear all the levels, become fit. In order to achieve this the player needs to guide the player traversing the different levels, avoiding the obstacles and unhealthy food. After traversing all the levels, the player will have achieved the goal of the game. In order to traverse from one level to the other, the player has to reach the end of the level. The different length of the levels vary and depend both on the speed of the level as well as the difficulty of the level. At the end of each level, there is a goal. This goal activates the win screen, which gives the player positive feedback on clearing a level. From this windscreen the player can choose to move to the next level or return to the main menu.*
+In order to traverse from one level to the other, the player has to reach the end of the level. The different length of the levels vary and depend both on the speed of the level as well as the difficulty of the level. At the end of each level, there is a goal. This goal activates the win screen, which gives the player positive feedback on clearing a level. From this windscreen the player can choose to move to the next level or return to the main menu.
 
 ### Playercontroller
 In terms of the gameplay the player is comprised of a *Collider* and a *RigidBody* provided by the Unity Engine. The *Collider* serves the role of detecting collisions between the player and his surroundings while the *Rigidbody* is used for manipulating the players position by using the Physics API provided by Unity. The implementation of these are present in the *PlayerController* where the logic of the mechanics and the interactions the player faces resides. 
@@ -209,7 +207,7 @@ To give the character smooth animations, pre-made animations were picked from th
 ## Our experience
 
 
-## Testing
+### Testing
 
 As a developer one often becomes blind to the things being done. It’s easy to think that new implementations are easy for users to understand, but this is not always the case to new players. Throughout the project we have had people test our game at various stages to ensure that the player understands what the game is, how to play it and if they understand what they see in front of them. This includes everything from the UIs a player sees through the game, the levels and the controlling of the character.
 
@@ -220,8 +218,8 @@ By week 47 we had several improvements. The design of the UI was improved to mak
 Final product?   
 
 
-## Reflections
-...
+### Reflections
+
 
 
 ## My contribution

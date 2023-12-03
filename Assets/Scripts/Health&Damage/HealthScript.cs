@@ -15,9 +15,12 @@ public class HealthScript : MonoBehaviour
     [Tooltip("The amount of damage taken each hit")]
     public float damageTaking = 20f;
 
-
+    [Header("Objects in the scene")]
+    [Tooltip("The player")]
     public GameObject target;
+    [Tooltip("The enviroment object with the groundspeed")]
     public GameObject ground;
+    [Tooltip("The bar in the health bar")]
     public Image image;
 
 

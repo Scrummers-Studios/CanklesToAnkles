@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isJumping = false;
 
     // Rolling
-    public bool isRolling = false;
+    private bool isRolling = false;
     private const float ROLL_DURATION = 0.5f;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
@@ -31,16 +31,6 @@ public class PlayerController : MonoBehaviour
     //Audio
     public AudioSource playerAudio;
     public AudioClip jump, roll;
-
-
-
-    void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0, 100, 100), (1.0f / Time.smoothDeltaTime).ToString());
-    }
-
-
-
 
     /// <summary>
     /// Initializes the player controller and its relevant components.

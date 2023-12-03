@@ -65,7 +65,7 @@ When trying to use the different characters for animations, we discovered that t
 #### Animations:
 The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take.  These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted . The conditions for the transitions are based on the physics properties of the player which are updated during the *FixedUpdate* which is dialed up to 100 calculations per second as a rough estimate meaning all framerates equal to or below this will not be affected.
 
-*Animation logic and 1st iteration of animations*
+*Animation logic*
 <p align="center">
   <img src="/docs/imgs/Animations_logic.png"/>
 </p>

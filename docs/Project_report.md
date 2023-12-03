@@ -180,7 +180,7 @@ As mentioned, the team had some challenges along the way. This includes problems
 
 
 ### Pre-production
-...
+Our pre-production phase consisted of brainstorming as a group and outlining what type of game we are creating. This meant defining our goals and the scope of the game. Given the short timeframe and limited budget we quickly landed on a "Runner" type game as a game which is simple in premise, but can easily be expanded upon should there be an oppertunity for it. As we have no experience with game development between us we had to create a plan for how to move forward aswell as who should research what. The details concerning planning, scope and goals are outlined in the High-level document.
 
 
 ### Production
@@ -192,8 +192,6 @@ The development process mostly took place remotely, as most team members had acc
 Once we were satisfied with the gameplay length and content, given our resource constraint, we transitioned into the post-production phase. This stage was focused on putting together all game components to complete the game loop, along with refining and polishing various elements. Additionally, it involved identifying and resolving bugs. 
 
 The production phase was a tremendous learning experience. One key insight was the importance of having a well-structured workflow. It became evident that preemptively creating all game elements before expanding to more levels would be more efficient. Implementing this approach in future projects will save time and resources, as it would eliminate the need to change around assets to add new elements, allowing for them to be implemented from the first creation of the level. 
-
-
 
 ### Tools
 
@@ -219,15 +217,6 @@ Final product?
 
 ### Reflections
 ...
-
-
-### References
-
-Får vi gratis av med rikig notasjon
-
-### Appendix
-Tas bare på Inspera?
-....
 
 
 ### My contribution

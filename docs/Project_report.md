@@ -227,13 +227,13 @@ Final product?
 
 
 ### Reflections
-
+As a whole our thoughts is that the final product is inline with our initial expectations. We are satisfied with mulitple aspects of the game which makes it a playable and challenging fun adventure. Looking back at our initial expectations and goals in the pre-production phase it is apparent that we have underestimated the amount of skill and work it takes to make games look good. Where the biggest challenge was animation and character modeling. In retrospect we should have invested more resources into animations as it is a crucial part of making the game feel fluent and responsive which might be the most important quality in a game like this. But given the limitations of our team not having any experience with artistry, we accept the final result. 
 
 
 ## My contribution
 
 ###### **Petter Edvardsen**
-During this project I created the gameplay logic surrounding the player movement and mechanics  , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
+During this project I created the gameplay logic surrounding the player movement and mechanics(PlayerController) , Animations, 1st iteration of User interface and logic, the Forest level as a whole and Post-processing for visuals on cameras. 
 
 ## Manual
 The game "The Weight Escape" is built for WebGL, Mac and Windows.

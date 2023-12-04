@@ -38,6 +38,10 @@ public class HealthScript : MonoBehaviour
     public void LooseHealth(float damage)
     {
         currentHealth -= damage;
+        if(currentHealth > maximumHealth)
+        {
+            currentHealth = maximumHealth;
+        }
         UpdateHealthBar();
         if (currentHealth <= 0f)
         {
@@ -47,11 +51,15 @@ public class HealthScript : MonoBehaviour
     public void LooseHealth()
     {
         currentHealth -= damageTaking;
+        if(currentHealth > maximumHealth)
+        {
+            currentHealth = maximumHealth;
+        }
         UpdateHealthBar();
         if (currentHealth <= 0f)
         {
             Die();
-        }
+        } 
     }
 
 
@@ -67,7 +75,7 @@ public class HealthScript : MonoBehaviour
         //target.SetActive(false);
         if (target.CompareTag("Player"))
         {
-            currentHealth = 100f;
+            currentHealth = defaultHealth;
             Respawn();
             UpdateHealthBar();
         }

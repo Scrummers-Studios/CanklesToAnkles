@@ -1,5 +1,10 @@
 # Final report
 
+## Preface
+*Link to WebGL game:*
+<a src="https://theimmortalbox.itch.io/cankels-to-ankels-web">Itch.io:WebGL</a>
+*Link to windows, linux and mac game:*
+<a src="https://theimmortalbox.itch.io/cankels-to-ankels-web">Itch.io:Windows</a>
 ## Overview
 “Weight Escape” is an engaging 2.5D runner game developed using the Unity engine, blended elements of action, adventure, comedy and platforming genres. The game is designed to offer a balance of entertaining story and escalating challenge, appealing to a broad spectrum of players ranging from children to young adults.
 Weight Escape has a captivating and humorous backstory. Players take on the role of an overweight character who embarks on a journey for a better life. On this journey the player must dodge a variety of obstacles in order to succeed. 

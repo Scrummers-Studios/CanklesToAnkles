@@ -17984,7 +17984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x_axis_speed: 0
-  z_axis_speed: 4
+  z_axis_speed: 6
   y_axis_speed: 0
 --- !u!1001 &1697986176
 PrefabInstance:
@@ -18175,6 +18175,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443662, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64145882203110256, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -20709,11 +20713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3400002
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 480300, guid: 8f82ce8acb15bb14f9ede7ed4c75be24, type: 3}
       propertyPath: m_LocalPosition.z

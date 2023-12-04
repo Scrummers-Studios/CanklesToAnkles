@@ -43,6 +43,7 @@ The tutorial level was created using assets from the [Synthy Studios Student pac
 
 <p align="center">
   <img src="/docs/imgs/tutorial_showcase.gif" alt="animated" />
+  <img src="/docs/imgs/tutorial.pdf" />
 </p>
 
 ### Village level
@@ -51,6 +52,7 @@ This is the first full level created for "Weight Escape". This level was created
 
 <p align="center">
   <img src="/docs/imgs/village_house.png"/>
+  <img src="/docs/imgs/village.png"/>
 </p>
 
 ### Forest level

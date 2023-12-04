@@ -132,7 +132,7 @@ In order to traverse from one level to the other, the player has to reach the en
 ### HealthScript
 The health script is orchestrating the whole mechanics for the health. It is built up with some basic methods that can alter the health of the player, in terms of be *damaged* or *healed*. If the one of these methods alter the health to the maximum, the player will not achive any more healing. Otherwise if the players health is altered below the minimum requirement, the player will respawn at the start of the stage. When the player respawns all of the pickups, enemies and the enviroment will be sett back to the original position at level start.
 <p align="center">
-  <img src="/docs/img/healthScript.png"/>
+  <img src="/docs/imgs/healthScript.png"/>
 </p>
 As seen in the the picture above, the script needs the enviroment, player and the picture in the healthbar. The script allso allows some basic settings such as the default damage taken, the current health as well as the maximum health and the default health. The bar in the health script gets updated every time the health of the player is altered, this is done by setting the fill property of the image to the current health divided by the maximum health. Our healthbar is somewhat different than other health bars, it is inverted, representing *diabetes*. So the full equation for the bar is actully 1 - currentHealth/ maximumHealth. Respawn is a method that is public in the healthScript, this is because the camera needs the ability to both deal damage to the player and respawn the player.
 

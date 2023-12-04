@@ -6,6 +6,7 @@ public class VideoPlayerScript : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public Button myButton;
+    public string fileName;
 
     void Start()
     {
@@ -14,6 +15,10 @@ public class VideoPlayerScript : MonoBehaviour
 
         // Set up a callback for when the video is finished
         videoPlayer.loopPointReached += VideoFinished;
+
+        string videoUrl = System.IO.Path.Combine(Application.streamingAssetsPath, fileName);
+        videoPlayer.url = videoUrl;
+        videoPlayer.Play();
     }
 
     void VideoFinished(VideoPlayer vp)

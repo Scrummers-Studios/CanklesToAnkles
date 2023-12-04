@@ -228,7 +228,7 @@ With the solution of using *Raycasting* to another problem occurred with the pla
 The logic surrounding theuser interface is simple and based around the two classes *LevelManager* and *Levelswitcher* where the intention is that if a object is supposed to change the level it will simply incorporate the *LevelSwitcher* script. This way maintains a loose coupling between the manager and the objects that incorporate this feautre. This approach is inspired by the Scene management from the [2D-platformer ](https://www.coursera.org/learn/game-design-and-development-2/home/week/1) game from the course[^1]. 
 
 #### User interface layout:
-The user interface layout attempts to appeal to the familiarity to the player. The layout itself consists of a sidemenu and such. As the game is now the amount of information that needs to be displayed is minimal giving a lot of freedom when it comes to design. Given this we opted for a basic sidemenu to see the character and game in pause and menu and a centered controls and settings page. 
+The user interface layout attempts to appeal to the familiarity to the player. The layout itself consists of a sidemenu with open space for showcasing the game state or artwork for the menu. As this stage the amount of information that needs to be displayed is minimal giving a lot of freedom when it comes to design. Given this I opted for a basic sidemenu to see the character and game when paused and for the menu a centered controls and settings page. 
 
 ## Sound
 

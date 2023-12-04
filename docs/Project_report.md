@@ -95,7 +95,11 @@ In the design of the final level, our objective was to create a city that felt f
 
 this pre-designed city scene provided an ideal foundation for our level. However, to edit it to our specific requirements, we made significant modifications. Initially, we scaled down the city by removing half, using the remaining portion as the level's background to create this sense of a bustling city. 
 
-We then started creating the playable area of the level. This involved adding additional buildings and other obstacles and making various adjustments to ensure seamless integration with the game's aesthetic and gameplay needs. 
+We then started creating the playable area of the level. This involved adding additional buildings and other obstacles and making various adjustments to ensure seamless integration with the game's aesthetic and gameplay needs.
+
+<p align="center">
+  <img src="/docs/imgs/city_roof.png" />
+</p>
 
 ## Characters
 “Cankles to Ankles” is a game which takes players on a journey of a man trying to transform his physique from a heavy build to a leaner build. The game consists of a total of four playable levels where one can see a gradual size decrease for each level. The process to start creating the characters, two pre-made characters were chosen. The skinny character remained the same, while for the heavier character, 3 versions were made. 

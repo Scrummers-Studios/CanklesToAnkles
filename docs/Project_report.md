@@ -43,7 +43,7 @@ The tutorial level was created using assets from the [Synthy Studios Student pac
 
 <p align="center">
   <img src="/docs/imgs/tutorial_showcase.gif" alt="animated" />
-  <img src="/docs/imgs/tutorial.pdf" />
+  <img src="/docs/imgs/tutorial.png" />
 </p>
 
 ### Village level

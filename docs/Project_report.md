@@ -221,6 +221,17 @@ With the solution of using *Raycasting* to another problem occurred with the pla
   <img src="/docs/imgs/Jump_code.png" />
 </p>
 
+### Goal
+Each level has a goal, this goal is placed at the end of each level. The goal is made up by 2 components, the gameobject which the player comes in contact with, and the effects system. The effect system is created through unity and is a resemblens of confetti. After the player reaches the goal the confetti gets activated and starts to rain down in the scene. With the confetti raining down behind the player can also see a UI element, giving possitive feedback to the player on completing the level. In the UI element you can find two buttons with the option to either proceede to the next level or quit to the main menu. Shown in the picture below the UI for completion of a level matches the rest of the theme of the UIs in the game. The confetti is also using the same color theme.
+
+<p align="center">
+  <img src="/docs/imgs/GoalScreen.png"/>
+</p>
+When the player is traversing through the levels, the goal will stay invisable. The gameobject goal is a 3D cube which the player can come in contact with. However this gameobject has a mesh that makes this goal visible, the goal script disables this mesh as soon as the scenen starts running. This allows us to have more clean finish line, with the opportunity to add visuals to the goal. Since the controller disables the mesh after the scene has started, as developers, we can see the box clearly and have the ability to move it, scale it, etc. The goal script is also the script which turns on the confetti and display the UI screen. Below is a picture of how the goal looks in the editor window, when the mesh is still enabled.
+
+<p align="center">
+  <img src="/docs/imgs/GoalObject.png"/>
+</p>
 
 ## User interface
 

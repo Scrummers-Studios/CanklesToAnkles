@@ -758,6 +758,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 870914566}
+    - target: {fileID: 7985953430095155037, guid: 4a809750766c32045bc4f8428c969156, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 870914566}
@@ -7102,6 +7106,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 503868662470668468, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 484.00012
+      objectReference: {fileID: 0}
     - target: {fileID: 1237876388308932488, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -67.99733
@@ -7166,6 +7174,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3028861059367020844, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -205.19356
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287216419892489408, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 473
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958262048360485528, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
+    - target: {fileID: 3958262048360485528, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8029081c604cf7b449b22f87a1aa466b, type: 2}
     - target: {fileID: 4135724155359089748, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -7178,8 +7202,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 248550072}
+    - target: {fileID: 7432791044385356267, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -191.19359
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3547018423167016090, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
+    - {fileID: 2155594667739368895, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6161380960398174501, guid: 17e4d55cb1f9ef14e802bf3275b6560c, type: 3}

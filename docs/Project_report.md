@@ -115,12 +115,14 @@ It started by importing the overweight character into Blender, where a red track
 When trying to use the different characters for animations, we discovered that the characters who were scaled didn’t look good when running, jumping etc. To fix this, the rigging of the characters where the animations didn’t work properly were removed. The characters were then imported into Mixamo where a new rig was fitted and added. When the character then was imported again into Unity the animations worked as they should.  
 
 ### Animations
-The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take.  These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted . The conditions for the transitions are based on the physics properties of the player which are updated during the *FixedUpdate* which is dialed up to 100 calculations per second as a rough estimate meaning all framerates equal to or below this will not be affected.
+The animation system simply consists of 4 animations, Running which serves as the Initial state between actions. From the running animation we have the two actions Jumping and Rolling which are the two actions the player can take. These two animations can therefore not be interrupted but all others can. Meaning in order to be able to jump right after landing it has to be able to be interrupted. The way this is implemented is that both the incoming and outgoing transistions to "Landing" and "Running" have their "Interruption source: Next state" meaning they can be interrupted by either rolling or jumping.The conditions for the transitions are based on the different player states determined by the physics of the player. To make sure these are updated frequently enough the fixed intervals are calculated 100 times each second meaning any framerate equal to or below will be in sync. 
 
 *Animation logic*
 <p align="center">
   <img src="/docs/imgs/Animations_logic.png"/>
 </p>
+
+
 
 ## Gameplay and Gameplay Mecahnics
 The gameplay for this game is fairly simple. In our game the goal is to reach the end of each level. The character moves constantly, and the player uses space to jump and ctrl to dodge obstacles. If the character gets caught by an obstacle and falls too far behind the camera, the level resets. In addition to obstacles there are both healthy and unhealthy foods that manipulate the “diabetes bar”. This is the character’s health, the bar fills up as the player gets closer to diabetes, and lowers if the player interacts with healthy foods. These foods and obstacles are spread through the different levels.

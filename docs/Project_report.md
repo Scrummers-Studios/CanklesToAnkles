@@ -129,6 +129,27 @@ The game is designed to make the environment, pickups, goal and everything relat
 
 In order to traverse from one level to the other, the player has to reach the end of the level. The different length of the levels vary and depend both on the speed of the level as well as the difficulty of the level. At the end of each level, there is a goal. This goal activates the win screen, which gives the player positive feedback on clearing a level. From this windscreen the player can choose to move to the next level or return to the main menu.
 
+### HealthScript
+The health script is orchestrating the whole mechanics for the health. It is built up with some basic methods that can alter the health of the player, in terms of be *damaged* or *healed*. If the one of these methods alter the health to the maximum, the player will not achive any more healing. Otherwise if the players health is altered below the minimum requirement, the player will respawn at the start of the stage. When the player respawns all of the pickups, enemies and the enviroment will be sett back to the original position at level start.
+<p align="center">
+  <img src="/docs/img/healthScript.png"/>
+</p>
+As seen in the the picture above, the script needs the enviroment, player and the picture in the healthbar. The script allso allows some basic settings such as the default damage taken, the current health as well as the maximum health and the default health. The bar in the health script gets updated every time the health of the player is altered, this is done by setting the fill property of the image to the current health divided by the maximum health. Our healthbar is somewhat different than other health bars, it is inverted, representing *diabetes*. So the full equation for the bar is actully 1 - currentHealth/ maximumHealth. Respawn is a method that is public in the healthScript, this is because the camera needs the ability to both deal damage to the player and respawn the player.
+
+Initially we thought it would be best to implement both health and lives, however after furthur discussion we decided to only use health. The first iteration of the health script consisted of both health and lives, with the ability to turn on or off the usage of the lives. We were planning on using lives as the health bar depleted, and after all the lives has been used, the player would need to restart the game at level 1.
+
+### CameraScript
+The camera needs to be able to detect if the player is slowing down and ends up outside of the view to the camera. This is done by using frustum planes. By creating many planes for the view angle of the camera and iterating trough them, the camera detects if the player's *boxCollider* is inside or outside these planes. This is a continuous check that goes every frame. If the player happens to be outside of these planes, the camera script will respawn the character.
+
+At the first iteration this method used pixels and *transform.position* to detect the position of the player. This was not a good solution since we felt like the player should have some chance to come back to the center of the screen. The problem for this was solved by making a moving camera with some delay. The camera follows the player, with some delay that will allow the player to both get stuck in the terrain and to return to the center of the screen.
+
+Second problem we encountered was that the player had the ability to respawn inside objects. By respawning the character in the center of the screen, the terrain might have gained some altitude or an obstacle might be in the way. This caused the player to respawn inside these objects and cant move. This was solved by resetting the position of the enviroment and all the components of the game. The one thing we did not set back to it's original position is the camera, this could have been implemented, but we decided not to do this cause the camera will *jump* back to it's place and it looked laggy.
+
+### Pickups and enemies
+The pickups use a script, handle all the logic for the pickups and the enemies. Originally this script was just a enemy script, that dealt some damage to the player, after some iterations we had implemented so that the enemies disapears when colliding with the player. Some iterations later, the script was altered to an pickupscript, this script allowed for changing from damage to healing of the player. With this we had the ability to implement healthy food which lowers the *diabetesbar*. In the last iteration some basic rotation was added to give a more intriguing impression of the pickups and the enemies.
+
+With the script disabling the pickups after the collision the pickups will still be inactive after the player respawns, this allows the player to contiune trying to clear the level if they should die from too much unhealthy food.
+
 ### Playercontroller
 In terms of the gameplay the player is comprised of a *Collider* and a *RigidBody* provided by the Unity Engine. The *Collider* serves the role of detecting collisions between the player and his surroundings while the *Rigidbody* is used for manipulating the players position by using the Physics API provided by Unity. The implementation of these are present in the *PlayerController* where the logic of the mechanics and the interactions the player faces resides. 
 

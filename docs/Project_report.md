@@ -89,6 +89,13 @@ The obstacles is what engages the player in this genre of games and is therefore
   <img src="/docs/imgs/Obstacles_seg_3.png" />
 </p>
 
+### City level
+
+In the design of the final level, our objective was to create a city that felt full and alive. To achieve this dynamix cityscape while efficiently managing development time, we strategically used the demo scene included in the Synty Studios city pack. 
+
+this pre-designed city scene provided an ideal foundation for our level. However, to edit it to our specific requirements, we made significant modifications. Initially, we scaled down the city by removing half, using the remaining portion as the level's background to create this sense of a bustling city. 
+
+We then started creating the playable area of the level. This involved adding additional buildings and other obstacles and making various adjustments to ensure seamless integration with the game's aesthetic and gameplay needs. 
 
 ## Characters
 “Cankles to Ankles” is a game which takes players on a journey of a man trying to transform his physique from a heavy build to a leaner build. The game consists of a total of four playable levels where one can see a gradual size decrease for each level. The process to start creating the characters, two pre-made characters were chosen. The skinny character remained the same, while for the heavier character, 3 versions were made. 

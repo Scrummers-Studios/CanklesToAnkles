@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     // Rolling
     private bool isRolling = false;
-    private const float ROLL_DURATION = 0.5f;
+    private const float ROLL_DURATION = 0.4f;
     private bool correctedPlayerColliderIncrease = false;
     private bool correctedPlayerColliderDecrease = true;
     private float timeOfLastRoll;

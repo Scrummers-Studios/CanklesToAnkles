@@ -82,7 +82,18 @@ The animation system simply consists of 4 animations, Running which serves as th
 
 *Animation logic*
 <p align="center">
-  <img src="/docs/imgs/Animations_logic.png"/>
+  <img src="/docs/imgs/Animations_logic_updated.png"/>
+</p>
+
+
+*1st iteration of animations*
+<p align="center">
+  <img src="/docs/imgs/Animations_1st_iteration.gif" alt="animated" />
+</p>
+
+*3rd iteration of animations*
+<p align="center">
+  <img src="/docs/imgs/Animations_3rd_iteration.gif" alt="animated" />
 </p>
 
 ## Gameplay and Gameplay Mecahnics

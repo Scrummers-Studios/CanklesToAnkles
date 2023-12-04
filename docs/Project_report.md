@@ -101,6 +101,10 @@ We then started creating the playable area of the level. This involved adding ad
   <img src="/docs/imgs/city_roof.png" />
 </p>
 
+<p align="center">
+  <img src="/docs/imgs/city.png" />
+</p>
+
 ## Characters
 “Cankles to Ankles” is a game which takes players on a journey of a man trying to transform his physique from a heavy build to a leaner build. The game consists of a total of four playable levels where one can see a gradual size decrease for each level. The process to start creating the characters, two pre-made characters were chosen. The skinny character remained the same, while for the heavier character, 3 versions were made. 
 
